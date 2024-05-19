@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <a class="logo" href="index.html"><img src="E4_LOGO_UPDATE-03.png" alt="" width="100"></a>
+
+        <div class="navLinks">
+            <div class="link">Home</div>
+            <div class="link">About us</div>
+            <div class="link">Join us</div>
+            <div class="link">Contact Us</div>
+        </div>
+
+        <i onclick="drpD()" class="fa-solid fa-bars" id="menu"></i>
+        <i onclick="drpU()" class="fa-solid fa-xmark" id="cancel"></i>
+    </nav>
+
+    <div id="drpdown" class="drpDiv">
+        <div class="link">Home</div>
+        <div class="link">About us</div>
+        <div class="link">Join us</div>
+        <div class="link">Contact Us</div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
