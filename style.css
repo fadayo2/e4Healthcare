@@ -84,7 +84,7 @@ body {
         color: white;
         font-weight: var(--boldFont);
         position: fixed;
-        top: 5.02rem;
+        top: 5rem;
         display: grid;
         align-items: center;
         justify-content: space-around;
