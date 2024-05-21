@@ -108,6 +108,7 @@ body {
 
 .drpDiv {
     display: none;
+    margin-top: 1rem;
 }
 
 #cancel {

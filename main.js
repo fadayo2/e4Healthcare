@@ -16,8 +16,8 @@ const drpU = () => {
 
 // let serDiv = document.getElementById('serDiv')
 
-const large = (event) => {
-    setTimeout(()=>{
-        event.target.id = 'centerDiv';
-    },1000)
-}
+// const large = (event) => {
+//     setTimeout(()=>{
+//         event.target.id = 'centerDiv';
+//     },1000)
+// }
