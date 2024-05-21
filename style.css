@@ -23,13 +23,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: .5s;
 }
 
 body {
     display: grid;
     overflow-x: hidden;
     font-family: var(--fontFamily);
-    background-color: var(--bgColor);
+    background-color: white;
 }
 
 .navbar {
@@ -42,7 +43,7 @@ body {
     justify-content: space-around;
     z-index: 999;
     background-color: white;
-    /* border-bottom: 1px solid black; */
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.247);
 }
 
 .logo {
@@ -125,7 +126,7 @@ body {
     display: flex;
     align-items: start;
     justify-content: space-around;
-    background-image: url(pexels-gustavo-fring-6285360.jpg);
+    background-image: url(e4bg1.jpg);
     width: 100vw;
     background-size: cover;
 }
@@ -135,7 +136,7 @@ body {
     display: flex;
     align-items: start;
     justify-content: space-around;
-    background-image: url(national-cancer-institute-6FabKijVwAU-unsplash.jpg);
+    background-image: url(e4bg2.jpg);
     width: 100vw;
     background-size: cover;
 }
@@ -244,8 +245,145 @@ body {
     box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.411);
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+header h1 {
+    color: var(--color2);
+}
+
+main {
+    width: 100vw;
+    /* border: 1px solid; */
+    height: fit-content;
+    background-color: #ffff;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* grid-template-columns: auto auto; */
+    gap: 4.5rem;
+    padding: 3rem;
+    position: relative;
+}
+
+main .servicesDiv {
+    width: 400px;
+    height: 300px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(3, 59, 78, 0.164);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: white;
+    transition: .5;
+    padding-top: 2rem;
+    position: relative;
+    cursor: pointer;
+}
+
+main .servicesDiv::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color2);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 20px;
+}
+
+.servicesDiv .servicesTxt {
+    /* border: 1px solid; */
+    width: 300px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.servicesDiv .servicesTxt h1 {
+    font-size: 18px;
+}
+
+.servicesDiv .servicesImg {
+    width: 120px;
+    height: 120px;
+    border-radius: 30%;
+    /* border: 1px solid; */
+    position: relative;
+    top: -80px;
+    background-color: white;
+    margin-bottom: -5rem;
+}
+
+.servicesDiv:hover {
+    .servicesImg {
+        scale: 1.5;
+        border-radius: 0;
+        box-shadow: 0px 0px 10px 1px rgba(3, 59, 78, 0.164);
+    }
+}
+
+.no1 {
+    background-image: url(Aged_care.jpg);
+    background-size: cover;
+}
+
+.no2 {
+    background-image: url(community.jpg);
+    background-size: cover;
+}
+
+.no3 {
+    background-image: url(mental_care.jpg);
+    background-size: cover;
+}
+
+.no4 {
+    background-image: url(disability_care.jpg);
+    background-size: cover;
+}
+
+.no5 {
+    background-image: url(home_care.jpg);
+    background-size: cover;
+}
+
+.servicesDiv button { 
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(124, 229, 247);
+    transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
+    cursor: pointer;
+    font-weight: 550;
+    font-family: var(--fontFamily);
+}
+
+.servicesDiv button:hover {
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.411);
+}
+
+#centerDiv {
+    position: relative;
+    /* height: 500px; */
+}
+
+/* #centerDiv .servicesTxt {
+    display: none;
+} */
 
 @media (max-width: 1024px) {
+    .herosection {
+        height: 700px;
+    }
     .herosection section {
         height: 600px;
     }
@@ -267,9 +405,15 @@ body {
     .h_t2 p {
         text-align: center;
     }
+    header {
+        margin-top: 2rem;
+    }
 }
 
 @media (max-width: 600px) {
+    .herosection {
+        height: 500px;
+    }
     .navLinks {
         display: none;
     }
@@ -305,5 +449,17 @@ body {
         padding-top: 1rem;
         align-items: start;
         height: 500px;
+    }
+    header {
+        margin-top: 5rem;
+    }
+    main {
+        padding-left: 2.3rem;
+    }
+    main .servicesDiv{
+        width: 80vw;
+    }
+    .servicesDiv .servicesTxt {
+        width: 70vw;
     }
 }

@@ -13,3 +13,11 @@ const drpU = () => {
     menu.style.cssText = 'display : block !important ;'
     cancel.style.cssText = 'display : none !important ;'
 };
+
+// let serDiv = document.getElementById('serDiv')
+
+const large = (event) => {
+    setTimeout(()=>{
+        event.target.id = 'centerDiv';
+    },1000)
+}
