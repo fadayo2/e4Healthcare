@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 :root { 
-    --color1 : rgb(194, 164, 37);
-    --color2 : rgb(0, 75, 133);
-    --bgColor : rgb(255, 255, 255);
-    --fontFamily : "Baloo 2", sans-serif;
-    --boldFont : 800;
+    --color2 : rgb(32, 185, 235);
+    --txtColor : rgb(255, 255, 255);
+    --fontFamily : "Poppins", sans-serif;
+    --boldFont : 600;
     --lightFont : 400;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 15px;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--color2);
+    background-color: rgba(0, 0, 0, 0.233);
     /* border-radius: 2px; */
 }
 
@@ -30,21 +30,19 @@ body {
     overflow-x: hidden;
     font-family: var(--fontFamily);
     background-color: var(--bgColor);
-    /* background-image: linear-gradient(90deg, rgba(14,7,134,1) 0%, rgba(9,66,121,1) 19%, rgba(7,81,144,1) 33%, rgba(14,113,182,1) 100%) !important; */
 }
 
 .navbar {
     top: 0;
     width: 100vw;
-    height: 80px;
-    border-bottom: 3px solid var(--color1);
-    /* box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.274); */
+    height: 100px;
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-around;
     z-index: 999;
-    background-color: var(--bgColor);
+    background-color: white;
+    /* border-bottom: 1px solid black; */
 }
 
 .logo {
@@ -56,7 +54,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: var(--boldFont);
     width: 900px;
     color: var(--color1);
@@ -65,19 +63,8 @@ body {
 
 .navLinks .link {
     cursor: pointer;
-    /* border: 1px solid black; */
     position: relative;
     height: 40px;
-}
-
-.slideIn , .slideIn2 , .slideIn3 , .slideIn4 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color2);
-    height: 3px;
-    width: 0;
-    border-radius: 30px;
 }
 
 .link:hover {
@@ -133,37 +120,49 @@ body {
     height: 100vh;
 }
 
-.splide {
-    /* background-color: red; */
-    height: inherit;
-}
-
-/* .splide__slide {
-    width: 400px;
-    height: 400px;
-    background-color: green;
-} */
-
 #splide1 {
-    height: 700px;
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.herotxt {
-    height: 400px;
-    width: 27vw;
+    height: inherit;
     display: flex;
     align-items: start;
     justify-content: space-around;
-    flex-direction: column;
-    position: relative;
+    background-image: url(pexels-gustavo-fring-6285360.jpg);
+    width: 100vw;
+    background-size: cover;
 }
 
-.herotxt h1 {
-    color: var(--color2);
+#splide2 {
+    height: inherit;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    background-image: url(national-cancer-institute-6FabKijVwAU-unsplash.jpg);
+    width: 100vw;
+    background-size: cover;
+}
+
+#splide3 {
+    height: inherit;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    background-image: url(e4bg3.jpg);
+    width: 100vw;
+    background-size: cover;
+}
+
+.herotxt {
+    height: 700px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(32, 184, 235, 0.521) 0%, rgba(32, 184, 235, 0.699) 100%);
+}
+
+/* .herotxt h1 {
+
+    
+    color: black;
     font-weight: var(--boldFont);
     font-size: 60px;
     text-shadow: 0px 3px 1px var(--color1);
@@ -171,10 +170,9 @@ body {
 }
 
 .herotxt p {
-    font-weight: var(--boldFont);
+    font-weight: var(--txtColor);
     font-size: 19px;
     color: var(--color1);
-    /* margin-top: -10rem; */
 }
 
 .herotxt .cta {
@@ -182,6 +180,8 @@ body {
     bottom: 0;
     left: 0;
 }
+
+
 
 .cta button {
     padding: 15px;
@@ -199,44 +199,75 @@ body {
 
 .cta button:hover {
     opacity: .95;
-}
-
-.heroImg {
-    height: 500px;
-    width: 50vw;
-    border-bottom-left-radius: 100px;
-    border-top-right-radius: 100px;
-    box-shadow: 10px 10px 1px 1px var(--color1);
-    background-color: var(--color2);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-/* .herotxt2 {
-    border: 1px solid;
-    width: 40vw;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
-
-.herotxt2 h1 {
-    color: var(--color2);
-    font-weight: var(--boldFont);
-    font-size: 60px;
-    text-shadow: 0px 3px 1px var(--color1);
-}
-
-.herotxt2 p {
-    font-weight: var(--boldFont);
-    font-size: 19px;
-    color: var(--color1);
 } */
+
+.herotxt .h_t2 {
+    width: 1000px;
+    height: fit-content;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.h_t2 h1 {
+    color: black;
+    font-weight: var(--boldFont);
+    font-size: calc(3.5vw + 3.5vh);
+}
+
+.h_t2 p {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color1);
+    text-wrap: wrap;
+}
+
+.h_t2 button {
+    padding: 15px;
+    width: 150px;
+    cursor: pointer;
+    font-family: var(--fontFamily);
+    font-weight: var(--boldFont);
+    color: black;
+    background-color: rgb(124, 229, 247);
+    border: none;
+    font-size: 15px;
+    border-radius: 15px;
+    transition: .2s;
+    transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
+}
+
+.h_t2 button:hover {
+    box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.411);
+}
+
+
+@media (max-width: 1024px) {
+    .herosection section {
+        height: 600px;
+    }
+    .herotxt {
+        padding-top: 1rem;
+        align-items: start;
+        height: 600px;
+    }
+    .herotxt .h_t2 {
+        /* border: 1px solid black; */
+        width: 100vw;
+        height: 420px;
+        align-items: center;
+        justify-content: center;
+        /* background-color: rgba(255, 255, 255, 0.26); */
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .h_t2 p {
+        text-align: center;
+    }
+}
 
 @media (max-width: 600px) {
     .navLinks {
@@ -252,8 +283,8 @@ body {
     .drpDiv {
         display: block;
         width: 100vw;
-        background-color: var(--color1);
-        color: white;
+        background-color: white;
+        color: black;
         font-weight: var(--boldFont);
         position: fixed;
         top: 5rem;
@@ -265,5 +296,14 @@ body {
         transition: .5s;
         transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
         overflow: hidden;
+        z-index: 888;
+    }
+    .herosection section {
+        height: 0px;
+    }
+    .herotxt {
+        padding-top: 1rem;
+        align-items: start;
+        height: 500px;
     }
 }

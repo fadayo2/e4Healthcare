@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>e4Healthcare Services Pty Ltd</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
@@ -11,21 +11,14 @@
 <body>
 
     <nav class="navbar">
-        <a class="logo" href="index.html"><img src="E4_LOGO_UPDATE-03.png" alt="" width="100"></a>
+        <a class="logo" href="index.html"><img src="e4-logo.png" alt="" width="100"></a>
 
         <div class="navLinks">
-            <div class="link">Home
-                <div class="slideIn"></div>
-            </div>
-            <div class="link">About us
-                <div class="slideIn2"></div>
-            </div>
-            <div class="link">Join us
-                <div class="slideIn3"></div>
-            </div>
-            <div class="link">Contact Us
-                <div class="slideIn4"></div>
-            </div>
+            <div class="link">Home</div>
+            <div class="link">Services</div>
+            <div class="link">About us</div>
+            <div class="link">Join us</div>
+            <div class="link">Contact Us</div>
         </div>
 
         <i onclick="drpD()" class="fa-solid fa-bars" id="menu"></i>
@@ -34,6 +27,7 @@
 
     <div id="drpdown" class="drpDiv">
         <div class="link">Home</div>
+        <div class="link">Services</div>
         <div class="link">About us</div>
         <div class="link">Join us</div>
         <div class="link">Contact Us</div>
@@ -46,42 +40,43 @@
                     <li class="splide__slide">
                         <div id="splide1">
                             <div class="herotxt">
-                                <h1>e4Healthcare</h1>
-                                <p>Innovative care for you, well-being for all.</p>
-                                <div class="cta">
-                                    <button>Join Us</button>
+                                <div class="h_t2">
+                                    <h1>e4Healthcare</h1>
+                                    <p>We provide our clients with experience and dedicated health care workers committed in delivering innovative evidence-based healthcare services for clients’ total well-being and the same time upholding our employee’s wellbeing or wellness. </p>
+                                    <div class="cta">
+                                        <button>Join Us</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="heroImg">
-                                <img class="img1" src="nurse1.png" alt="" width="400">
                             </div>
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div id="splide1">
+                        <div id="splide2">
                             <div class="herotxt">
-                                <h1>e4Healthcare</h1>
-                                <p>Exceptional care, compassionate service, and a team that cares.</p>
-                                <div class="cta">
-                                    <button>Join Us</button>
+                                <div>
+                                    <div class="h_t2">
+                                        <h1>e4Healthcare</h1>
+                                        <p>Our commitment is to enrich and support our clients to live their life with exceptional care and services wrapped with integrity and compassion, whilst appreciating our staff who embraces their services to their community with grace and courage. </p>
+                                        <div class="cta">
+                                            <button>Join Us</button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="heroImg">
-                                <img class="img1" src="groupPic.png" alt="" width="650" style="position: absolute; bottom: 0;left: 4rem;">
                             </div>
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div id="splide1">
+                        <div id="splide3">
                             <div class="herotxt">
-                                <h1>e4Healthcare</h1>
-                                <p>We aim to be WA's top staffing agency, known for hospitality to both clients and staff.</p>
-                                <div class="cta">
-                                    <button>Join Us</button>
+                                <div>
+                                    <div class="h_t2">
+                                        <h1>e4Healthcare</h1>
+                                        <p>Our goal is to be No 1 staffing agency in Western Australia that is known for our hospitality to our clients and staff. </p>
+                                        <div class="cta">
+                                            <button>Join Us</button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="heroImg">
-                                <img class="img1" src="groupPic2.png" alt="" style="position: absolute; bottom: 0;left: 0;">
                             </div>
                         </div>
                     </li>
@@ -94,7 +89,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
         var splide = new Splide( '.splide', {
-            type: 'fade',
             rewind: true,
             autoplay: 'play',
         } );
