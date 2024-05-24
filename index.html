@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link rel="shortcut icon" href="favicon (3).ico" type="image/x-icon">
 </head>
 <body>
 
@@ -84,11 +86,7 @@
             </div>
         </section>
     </section>
-
-    <header>
-        <h1>Services</h1>
-    </header>
-
+    
     <main>
         <div onclick="large(event)" class="servicesDiv">
             <div class="servicesImg no1"></div>
@@ -127,17 +125,79 @@
         </div>
     </main>
 
-    <!-- <footer>
+    <section class="services__we__provide">
 
-    </footer> -->
+        <header>
+            <h1>Services we provide included but limited to:</h1>
+        </header>
+
+        <div class="provide__div">
+            <h1><i class="fa-solid fa-circle-dot"></i> Registered Nurses</h1>
+            <!-- <img src="arrow1-ezgif.com-rotate.svg" alt="" width="500" height="500"> -->
+            <div class="stickDiv">
+                <div style="background-color: rgb(240,242,241);" class="sticky">
+                    <img width="500" src="ServicesNurse.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="provide__div">
+            <h1><i class="fa-solid fa-circle-dot"></i>Clinic Nurses</h1>
+            <div class="stickDiv">
+                <div style="background-color: rgb(252,250,251);" class="sticky">
+                    <img width="500" src="clicnicNurse.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="provide__div">
+            <h1><i class="fa-solid fa-circle-dot"></i>Nurse Practitioners</h1>
+            <div class="stickDiv">
+                <div style="background-color: rgb(42,70,94);" class="sticky">
+                    <img width="500" src="nursePractitioners.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="provide__div">
+            <h1><i class="fa-solid fa-circle-dot"></i>Enrolled Nurses</h1>
+            <div class="stickDiv">
+                <div style="background-color: rgb(227,223,222);" class="sticky">
+                    <img width="500" src="enrolledNurse.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="provide__div">
+            <h1><i class="fa-solid fa-circle-dot"></i>Assistants in Nursing (Carers/ PCA’s)</h1>
+            <div class="stickDiv">
+                <div style="background-color: rgb(224,222,227);" class="sticky">
+                    <img width="500" src="assistantInNursing.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        
+
+        <!-- <h1><i class="fa-solid fa-circle-dot"></i> Registered Nurses</h1>
+        <div class="stickDiv">
+            <div class="sticky"></div>
+        </div> -->
+
+    </section>
+
+    <footer>
+
+    </footer>
     
     <script src="main.js"></script>
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
         var splide = new Splide( '.splide', {
-            autoplay: 'play',
-            type: 'loop',
+            autoplay: 'true',
+            type: 'fade',
+            rewind: true,
         } );
         splide.mount();
     </script>
