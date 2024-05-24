@@ -3,7 +3,8 @@
 
 :root { 
     --color2 : #20b9eb;
-    --txtColor : rgb(255, 255, 255);
+    --color1 : rgb(255, 255, 255);
+    --color3 : black;
     --fontFamily : "Poppins", sans-serif;
     --boldFont : 600;
     --lightFont : 400;
@@ -31,6 +32,34 @@ body {
     overflow-x: hidden;
     font-family: var(--fontFamily);
     background-color: white;
+    /* cursor: none; */
+}
+
+.custom-cursor, .custom-cursor-trail {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    /* mix-blend-mode: difference; Optional: makes cursor blend with background */
+}
+
+.custom-cursor {
+    background: var(--color2);
+    transition: transform 0.1s ease;
+}
+
+.custom-cursor-trail {
+    background: rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s ease;
+}
+
+
+.custom-cursor.click {
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: transform 0.15s ease;
 }
 
 .navbar {
@@ -58,7 +87,7 @@ body {
     font-size: 18px;
     font-weight: var(--boldFont);
     width: 900px;
-    color: var(--color1);
+    color: var(--color3);
     margin-top: .5rem;
 }
 
@@ -101,7 +130,7 @@ body {
 }
 
 .navbar i {
-    color: var(--color1) !important;
+    color: var(--color2) !important;
     font-size: 20px;
     display: none !important;
 }
@@ -109,6 +138,7 @@ body {
 .drpDiv {
     display: none;
     margin-top: 1rem;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.322);
 }
 
 #cancel {
@@ -158,7 +188,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, rgba(32, 184, 235, 0.521) 0%, rgba(32, 184, 235, 0.699) 100%);
+    background: linear-gradient(90deg, rgba(5, 28, 36, 0.521) 0%, rgba(4, 24, 31, 0.699) 100%);
 }
 
 .herotxt .h_t2 {
@@ -173,7 +203,7 @@ body {
 }
 
 .h_t2 h1 {
-    color: black;
+    color: white;
     font-weight: var(--boldFont);
     font-size: calc(3.5vw + 3.5vh);
 }
@@ -181,7 +211,7 @@ body {
 .h_t2 p {
     font-weight: 500;
     font-size: 18px;
-    color: var(--color1);
+    color: white;
     text-wrap: wrap;
 }
 
@@ -201,7 +231,29 @@ body {
 }
 
 .h_t2 button:hover {
-    box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 0.411);
+    box-shadow: 5px 5px 1px 1px rgba(255, 255, 255, 0.411);
+}
+
+.mainSection {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100vw;
+    background-color: white;
+    z-index: 10;
+    position: relative;
+    top: 40rem;
+}
+
+.headingTxt {
+    margin-top: 3rem;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color2);
+    font-size: 20px;
 }
 
 main {
@@ -214,8 +266,6 @@ main {
     flex-wrap: wrap;
     gap: 5rem;
     padding: 3rem;
-    position: relative;
-    top: 40rem;
     padding-bottom: 10rem;
 }
 
@@ -391,10 +441,16 @@ header h1 {
 }
 
 .sticky img {
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.377);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.116);
 }
 
 @media (max-width: 1024px) {
+    .custom-cursor {
+        display: none;
+    }
+    .custom-cursor-trail {
+        display: none;
+    }
     .herosection {
         height: 700px;
     }
@@ -512,5 +568,6 @@ header h1 {
     }
     .sticky img {
         width: 300px;
+        border-radius: 20px;
     }
 }
