@@ -244,6 +244,7 @@ body {
     z-index: 10;
     position: relative;
     top: 40rem;
+    margin-bottom: 3rem;
 }
 
 .headingTxt {
@@ -376,7 +377,6 @@ main .servicesDiv::after {
 .services__we__provide {
     width: 100vw;
     height: fit-content;
-    /* border: 1px solid; */
     background-color: white;
     position: relative;
     top: 37rem;
@@ -385,6 +385,7 @@ main .servicesDiv::after {
 header {
     justify-content: start;
     padding-left: 2rem;
+    z-index: 15;
 }
 
 header h1 {
@@ -444,6 +445,87 @@ header h1 {
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.116);
 }
 
+.aboutUs {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 100;
+    position: relative;
+    top: 37rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.aboutTxt h1 {
+    color: var(--color2);
+}
+
+.aboutUs .aboutTxt {
+    height: fit-content;
+    width: 45vw;
+    display: flex;
+    align-items: center;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+    font-family: var(--fontFamily);
+    font-weight: var(--boldFont);
+    gap: 2rem;
+    line-height: 2rem;
+    background-color: white;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.267);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.aboutUs .aboutImg {
+    width: 50vw;
+    height: 100vh;
+    background-image: url(aboutUs.jpg);
+    background-size: cover;
+    border: none;
+}
+
+.aboutTxt button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(124, 229, 247);
+    transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
+    cursor: pointer;
+    font-weight: 550;
+    font-family: var(--fontFamily);
+}
+.aboutTxt button:hover {
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.411);
+}
+
+.aim {
+    padding-top: 10rem;
+    height: fit-content;
+    flex-direction: row-reverse;
+}
+
+.aim .aboutImg {
+    background-image: url(Aim.jpg);
+}
+
+.value {
+    flex-direction: row;
+    padding-top: 10rem;
+    height: fit-content;
+}
+
+.value .Img {
+    background-image: url(values.jpg);
+    background-size: cover;
+}
+
+.value .aboutTxt ol{
+    margin-left: 1rem;
+}
+
 @media (max-width: 1024px) {
     .custom-cursor {
         display: none;
@@ -485,6 +567,26 @@ header h1 {
     .provide__div .stickDiv {
         transform: rotate(0deg) !important;
         /* border: 1px solid; */
+    }
+    .aboutUs {
+        padding-top: 3rme;
+        display: grid;
+        height: fit-content;
+    }
+    .aboutUs .perspectTxt {
+        perspective: none;
+    }
+    .aboutUs .aboutTxt {
+        /* transform: rotateY(0deg); */
+        width: inherit;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    #Aimg {
+        /* transform: rotateY(0deg); */
+        height: 600px;
+        width: inherit;
+        border-radius: 0px;
     }
 }
 
@@ -543,7 +645,6 @@ header h1 {
     .provide__div {
         position: static;
         top: 120px;
-        /* border: 3px solid ; */
         padding-top: 5rem;
     }
     .provide__div h1 {
@@ -569,5 +670,19 @@ header h1 {
     .sticky img {
         width: 300px;
         border-radius: 20px;
+    }
+    #Aimg {
+        background-image: url(aboutUs-rBg.png);
+        height: 500px;
+    }
+    .aim .aboutImg{
+        background-image: url(Aim-rbg.png);
+        height: 500px;
+        width: 100vw;
+    }
+    .value .aboutImg{
+        background-image: url(values-rbg.png);
+        height: 500px;
+        width: 100vw;
     }
 }
