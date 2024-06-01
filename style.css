@@ -97,38 +97,6 @@ body {
     height: 40px;
 }
 
-.link:hover {
-    .slideIn {
-        width: 56px;
-        transition: .3s;
-        transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
-    }
-}
-
-.link:hover {
-    .slideIn2 {
-        width: 85px;
-        transition: .3s;
-        transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
-    }
-}
-
-.link:hover {
-    .slideIn3 {
-        width: 68px;
-        transition: .3s;
-        transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
-    }
-}
-
-.link:hover {
-    .slideIn4 {
-        width: 105px;
-        transition: .3s;
-        transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
-    }
-}
-
 .navbar i {
     color: var(--color2) !important;
     font-size: 20px;
@@ -256,7 +224,7 @@ body {
     font-size: 20px;
 }
 
-main {
+.m2 {
     width: 100vw;
     height: fit-content;
     background-color: #ffff;
@@ -269,7 +237,7 @@ main {
     padding-bottom: 10rem;
 }
 
-main .servicesDiv {
+.m2 .servicesDiv {
     width: 400px;
     height: 300px;
     /* border: 1px solid black; */
@@ -286,7 +254,7 @@ main .servicesDiv {
     cursor: pointer;
 }
 
-main .servicesDiv::after {
+.m2 .servicesDiv::after {
     content: '';
     position: absolute;
     right: 0;
@@ -560,7 +528,9 @@ header h1 {
 footer {
     height: fit-content;
     background-image: url(pattern.svg);
+    /* background-color: var(--color2); */
     background-size: cover; 
+    /* color: white; */
 }
 
 footer .footerContext {
@@ -601,7 +571,7 @@ footer .footerContext {
     justify-content: space-around;
     height: fit-content;
     gap: 2rem;
-    color: black;
+    /* color: white; */
 }
 
 .contact .links {
@@ -634,7 +604,7 @@ footer .footerContext {
 
 .footerContext h2{
     font-weight: 600;
-    color: var(--color2);
+    /* color: var(--color1); */
 }
 
 .services .fs a{
