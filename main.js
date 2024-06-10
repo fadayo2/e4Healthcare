@@ -3,7 +3,7 @@ let cancel = document.getElementById('cancel');
 let menu = document.getElementById('menu');
 
 const drpD = () => {
-    drpDown.style.height = '250px';
+    drpDown.style.height = '500px';
     menu.style.cssText = 'display : none !important ;'
     cancel.style.cssText = 'display : block !important ;'
 };
@@ -50,3 +50,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+const dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                let timeout;
+
+                dropdown.addEventListener('mouseenter', function() {
+                    clearTimeout(timeout);
+                    this.querySelector('.dropdown-content').style.display = 'grid';
+                });
+
+                dropdown.addEventListener('mouseleave', function() {
+                    const dropdownContent = this.querySelector('.dropdown-content');
+                    timeout = setTimeout(() => {
+                        dropdownContent.style.display = 'none';
+                    }, 600); 
+                });
+
+                dropdown.querySelector('.dropdown-content').addEventListener('mouseenter', function() {
+                    clearTimeout(timeout);
+                });
+
+                dropdown.querySelector('.dropdown-content').addEventListener('mouseleave', function() {
+                    this.style.display = 'none';
+                });
+});
+
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) { // Adjust this value based on when you want the color to change
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+function dialNumber(number) {
+    window.location.href = `tel:${number}`;
+}
+
+function contact(){
+    location.href = 'contact.html';
+}
+
+function abtUs(){
+    location.href = 'aboutUs.html';
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services - Aged care support</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="servA.css">
+    <link rel="shortcut icon" href="favicon (3).ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+
+    <nav id="navbar" class="navbar">
+        <a class="logo" href="index.html"><img src="e4-logo.png" alt="" width="130"></a>
+
+        <div class="navLinks">
+            <a style="text-decoration: none;" href="index.html"><div class="link">Home</div></a>
+            <div onclick="serv()" class="link dropdown" style="color: #14a0f7;">Services
+                    <div class="dropdown-content">
+                        <a href="servicesAged.html">Aged care residential facility and hospitals</a>
+                        <a href="servicesComm.html">Community care/Respite support</a>
+                        <a href="servicesHome.html">Home care support</a>
+                        <a href="servicesMental.html"> Mental health support programs</a>
+                        <a href="serviceDisable.html"> Disability care support</a>
+                    </div>
+            </div>
+            <a style="text-decoration: none;" href="aboutUs.html"><div class="link">About Us</div></a>
+            <a style="text-decoration: none;" href="joinUs.html"><div class="link">Join Us</div></a>
+            <a style="text-decoration: none;" href="contact.html"><div class="link">Contact Us</div></a>
+        </div>
+
+        <button onclick="dialNumber('0411156749')" class="red-button">0411 156 749</button>
+        
+        <i onclick="drpD()" class="fa-solid fa-bars" id="menu"></i>
+        <i onclick="drpU()" class="fa-solid fa-xmark" id="cancel"></i>
+
+    </nav>
+
+    <div id="drpdown" class="drpDiv">
+        <a style="text-decoration: none;color: black;" href="index.html"><div class="link">Home</div></a>
+        <a style="text-decoration: none;color: black;" href=""><div class="link">Services</div></a>
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        <hr>
+        <a style="text-decoration: none;color: var(--color2);" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
+        <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
+        <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
+        <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
+        <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
+        <hr>
+        <a style="text-decoration: none;color: black;" href="aboutUs.html"><div class="link">About us</div></a>
+        <a style="text-decoration: none;color: black;" href="joinUs.html"><div class="link">Join us</div></a>
+        <a style="text-decoration: none;color: black;" href="contact.html"><div class="link">Contact us</div></a>
+    </div>
+
+    <section class="__herosection"> 
+        <div class="__txt">
+            <h1>Aged care residential <br> facility and hospitals</h1>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="maindiv">
+            <img src="agedccuu.jpg" alt="" width="">
+            <div class="mainTxt">
+                <h1>Collaborate to support clients’ care needs</h1>
+                <p>Aged care residential facilities and hospitals work closely together to provide comprehensive care for clients, ensuring that their medical, emotional, and social needs are met effectively. Care teams from both settings communicate and share important information to provide continuity of care for clients transitioning between aged care homes and hospitals, leading to improved overall well-being and outcomes by ensuring they receive coordinated and integrated care.</p>
+            </div>
+        </div>
+        <div class="maindiv mt">
+            <img src="AGEDCJJtt.jpg" alt="" width="">
+            <div class="mainTxt">
+                <h1>Provide nursing care for clients in aged care homes or recovering in hospitals</h1>
+                <p>Skilled nurses in aged care residential facilities and hospitals assess, plan, implement, and evaluate care to ensure the health and safety of clients. They work collaboratively with other healthcare professionals to provide holistic care, coordinating treatments, medications, and therapies for each client's individual needs.</p>
+            </div>
+        </div>
+        <div class="maindiv">
+            <img src="agedcare 33.jpg" alt="" width="">
+            <div class="mainTxt">
+                <h1>Experienced healthcare workers assist with daily living activities and medication management</h1>
+                <p>Experienced healthcare workers in aged care residential facilities and hospitals provide essential assistance to clients with daily living activities, medication management, and overall well-being. They support clients with tasks like bathing, dressing, grooming, and eating, ensure proper medication administration, monitor for side effects, and communicate any concerns to nursing staff. This dedicated support promotes independence, dignity, and enhances the quality of life for each individual through personalized care and attention.</p>
+            </div>
+        </div>
+        <div class="maindiv mt">
+            <img src="agedcare 44.jpg" alt="" width="">
+            <div class="mainTxt">
+                <h1>Staff are available for various shifts and leave coverage</h1>
+                <p>Aged care residential facilities and hospitals operate 24/7 with staff working various shifts to provide round-the-clock care. This includes covering for colleagues on leave to ensure continuity of care and adequate staffing levels. The flexibility in scheduling and staffing enables consistent, high-quality care for clients at all times.</p>
+            </div>
+        </div>
+    </main>
+
+    <div class="contactUs">
+        <div class="contactUsDiv">
+            <h1>We Care with Love and Respect</h1>
+            <p>Our Team Is Here To Help.</p>
+            <button onclick="contact()">Contact Us</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContext">
+            <div class="services">
+                <img src="e4 original logo white.png" alt="" width="150">
+                <p>e4 healthcare corporation is poised to deliver exceptional services to our clients while thoroughly engaging with them and their families in vital aspects of their care using our team of experienced and exceptional staff.</p>
+            </div>
+            <div class="services">
+                <h2>Services</h2>
+                <hr>
+                <div class="fs">
+                    <a href="servicesAged.html">Aged care residential facility and hospitals</a>
+                    <a href="servicesComm.html">Community Care/Respite Support</a>
+                    <a href="servicesHome.html">Home Care Support</a>
+                    <a href="servicesMental.html">Mental Health Support Programs</a>
+                    <a href="serviceDisable.html">Disability Care Support</a>
+                </div>
+            </div>
+            <div class="contact">
+                <h2>Contact</h2>
+                <hr>
+                <div class="fs">
+                    <p>For all staff bookings and general enquiries please call 0411 156 749 alternatively, email your request or enquiry to admin@e4healthcare.info</p> <br>
+                    <p>Monday to Friday 8:30am- 6pm</p> <br>
+                    <p>Monday to Sunday (24 hours Staff Bookings Only)</p>
+                </div>
+                <!-- <div class="links">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div> -->
+            </div>
+        </div>  
+        <hr>
+        <div class="lstDiv">
+            <p>© Copyright 2024 | All Rights Reserved by e4Healthcare</p>
+        </div>
+    </footer>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

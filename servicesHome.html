@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>services - Home care support</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="aboutUs.css"> -->
+    <link rel="stylesheet" href="servH.css">
+    <link rel="shortcut icon" href="favicon (3).ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+
+    <nav id="navbar" class="navbar">
+        <a class="logo" href="index.html"><img src="e4-logo.png" alt="" width="130"></a>
+
+        <div class="navLinks">
+            <a style="text-decoration: none;" href="index.html"><div class="link">Home</div></a>
+            <div onclick="serv()" class="link dropdown" style="color: #14a0f7;">Services
+                    <div class="dropdown-content">
+                        <a href="servicesAged.html">Aged care residential facility and hospitals</a>
+                        <a href="servicesComm.html">Community care/Respite support</a>
+                        <a href="servicesHome.html">Home care support</a>
+                        <a href="servicesMental.html"> Mental health support programs</a>
+                        <a href="serviceDisable.html"> Disability care support</a>
+                    </div>
+            </div>
+            <a style="text-decoration: none;" href="aboutUs.html"><div class="link">About Us</div></a>
+            <a style="text-decoration: none;" href="joinUs.html"><div class="link">Join Us</div></a>
+            <a style="text-decoration: none;" href="contact.html"><div class="link">Contact Us</div></a>
+        </div>
+
+        <button onclick="dialNumber('0411156749')" class="red-button">0411 156 749</button>
+        
+        <i onclick="drpD()" class="fa-solid fa-bars" id="menu"></i>
+        <i onclick="drpU()" class="fa-solid fa-xmark" id="cancel"></i>
+
+    </nav>
+
+    <div id="drpdown" class="drpDiv">
+        <a style="text-decoration: none;color: black;" href="index.html"><div class="link">Home</div></a>
+        <a style="text-decoration: none;color: black;" href=""><div class="link">Services</div></a>
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        <hr>
+        <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
+        <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
+        <a style="text-decoration: none;color: var(--color2);" href="servicesHome.html">Home care support</a>
+        <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
+        <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
+        <hr>
+        <a style="text-decoration: none;color: black;" href="aboutUs.html"><div class="link">About us</div></a>
+        <a style="text-decoration: none;color: black;" href="joinUs.html"><div class="link">Join us</div></a>
+        <a style="text-decoration: none;color: black;" href="contact.html"><div class="link">Contact us</div></a>
+    </div>
+
+    <section class="__herosection"> 
+        <div class="__txt">
+            <h1>Home Care Support</h1>
+        </div>
+    </section>
+
+    <main class="main">
+        <div class="maindiv">
+            <img src="home1.jpg" alt="" width="">
+            <div class="mainTxt">
+                <h1>Friendly and highly experienced staff promote independence</h1>
+                <p>In home care support, friendly and highly experienced staff work to promote independence among clients. By providing encouragement, guidance, and a helping hand, they empower individuals to maintain their autonomy and make their own choices, fostering a sense of self-reliance and empowerment.</p>
+            </div>
+        </div>
+        <div class="maindiv mt">
+            <img src="home4.jpg" alt="" width="">
+            <div class="mainTxt">
+                <h1>Personalized care and services to meet individual needs and goals</h1>
+                <p>Personalized care and services are tailored to meet the individual needs and goals of each client in home care support. Staff work closely with clients and their families to create customized care plans that address specific requirements, preferences, and aspirations, ensuring that the support provided is tailored to enhance the client's overall well-being and quality of life.</p>
+            </div>
+        </div>
+        <div class="maindiv">
+            <img src="home2.jpg" alt="" width="">
+            <div class="mainTxt">
+                <h1>Keep clients safe, independent, and connected to their community</h1>
+                <p>Home care support services aim to keep clients safe, independent, and connected to their community. Through safety assessments, mobility assistance, social engagement activities, and community involvement opportunities, staff create a supportive environment that promotes security, autonomy, and social connections, enabling clients to remain active, engaged, and connected within their local community.</p>
+            </div>
+        </div>
+        <div class="maindiv mt">
+            <img src="home3.jpg" alt="" width="">
+            <div class="mainTxt">
+                <h1>Improve health and well-being.</h1>
+                <p>The primary goal of home care support services is to improve the health and well-being of clients. By offering personalized care, health monitoring, medication management, nutrition support, and access to healthcare resources, staff work to enhance the physical, mental, and emotional health of clients, promoting overall wellness and quality of life.</p>
+            </div>
+        </div>
+    </main>
+
+    <div class="contactUs">
+        <div class="contactUsDiv">
+            <h1>We Care with Love and Respect</h1>
+            <p>Our Team Is Here To Help.</p>
+            <button onclick="contact()">Contact Us</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContext">
+            <div class="services">
+                <img src="e4 original logo white.png" alt="" width="150">
+                <p>e4 healthcare corporation is poised to deliver exceptional services to our clients while thoroughly engaging with them and their families in vital aspects of their care using our team of experienced and exceptional staff.</p>
+            </div>
+            <div class="services">
+                <h2>Services</h2>
+                <hr>
+                <div class="fs">
+                    <a href="servicesAged.html">Aged care residential facility and hospitals</a>
+                    <a href="servicesComm.html">Community Care/Respite Support</a>
+                    <a href="servicesHome.html">Home Care Support</a>
+                    <a href="servicesMental.html">Mental Health Support Programs</a>
+                    <a href="serviceDisable.html">Disability Care Support</a>
+                </div>
+            </div>
+            <div class="contact">
+                <h2>Contact</h2>
+                <hr>
+                <div class="fs">
+                    <p>For all staff bookings and general enquiries please call 0411 156 749 alternatively, email your request or enquiry to admin@e4healthcare.info</p> <br>
+                    <p>Monday to Friday 8:30am- 6pm</p> <br>
+                    <p>Monday to Sunday (24 hours Staff Bookings Only)</p>
+                </div>
+                <!-- <div class="links">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div> -->
+            </div>
+        </div>  
+        <hr>
+        <div class="lstDiv">
+            <p>© Copyright 2024 | All Rights Reserved by e4Healthcare</p>
+        </div>
+    </footer>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

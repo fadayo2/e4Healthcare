@@ -19,217 +19,235 @@
 
     <!-- custom cursor -->
 
-    <nav class="navbar">
-        <a class="logo" href="index.html"><img src="e4-logo.png" alt="" width="100"></a>
+    <nav id="navbar" class="navbar">
+        <a class="logo" href="index.html"><img src="e4-logo.png" alt="" width="130"></a>
 
         <div class="navLinks">
-            <a style="color: var(--color2);text-decoration: none;" href="index.html"><div class="link">Home</div></a>
-            <a style="color: black;text-decoration: none;" href=""><div class="link">Services</div></a>
-            <a style="color: black;text-decoration: none;" href="aboutUs.html"><div class="link">About Us</div></a>
-            <a style="color: black;text-decoration: none;" href=""><div class="link">Join Us</div></a>
-            <a style="color: black;text-decoration: none;" href=""><div class="link">Contact Us</div></a>
+            <a style="text-decoration: none;" href="index.html"><div style="color: #14a0f7;" class="link">Home</div></a>
+            <div onclick="serv()" class="link dropdown">Services
+                    <div class="dropdown-content">
+                        <a href="servicesAged.html">Aged care residential facility and hospitals</a>
+                        <a href="servicesComm.html">Community care/Respite support</a>
+                        <a href="servicesHome.html">Home care support</a>
+                        <a href="servicesMental.html"> Mental health support programs</a>
+                        <a href="serviceDisable.html"> Disability care support</a>
+                    </div>
+            </div>
+            <a style="text-decoration: none;" href="aboutUs.html"><div class="link">About Us</div></a>
+            <a style="text-decoration: none;" href="joinUs.html"><div class="link">Join Us</div></a>
+            <a style="text-decoration: none;" href="contact.html"><div class="link">Contact Us</div></a>
         </div>
 
+        <button onclick="dialNumber('0411156749')" class="red-button">0411 156 749</button>
+        
         <i onclick="drpD()" class="fa-solid fa-bars" id="menu"></i>
         <i onclick="drpU()" class="fa-solid fa-xmark" id="cancel"></i>
+
     </nav>
 
     <div id="drpdown" class="drpDiv">
-        <div class="link">Home</div>
-        <div class="link">Services</div>
-        <div class="link">About us</div>
-        <div class="link">Join us</div>
-        <div class="link">Contact Us</div>
+        <a style="text-decoration: none;color: var(--color2);" href="index.html"><div class="link">Home</div></a>
+        <a style="text-decoration: none;color: black;" href=""><div class="link">Services</div></a>
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        <hr>
+        <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
+        <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
+        <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
+        <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
+        <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
+        <hr>
+        <a style="text-decoration: none;color: black;" href="aboutUs.html"><div class="link">About us</div></a>
+        <a style="text-decoration: none;color: black;" href="joinUs.html"><div class="link">Join us</div></a>
+        <a style="text-decoration: none;color: black;" href="contact.html"><div class="link">Contact us</div></a>
     </div>
 
     <section class="herosection">
-        <section class="splide" id="splide" aria-labelledby="carousel-heading">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <div id="splide1">
-                            <div class="herotxt">
-                                <div class="h_t2">
-                                    <h1>e4Healthcare</h1>
-                                    <p>We provide our clients with experience and dedicated health care workers committed in delivering innovative evidence-based healthcare services for clients’ total well-being and the same time upholding our employee’s wellbeing or wellness. </p>
-                                    <div class="cta">
-                                        <button>Join Us</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="splide__slide">
-                        <div id="splide2">
-                            <div class="herotxt">
-                                <div>
-                                    <div class="h_t2">
-                                        <h1>Our Commitment</h1>
-                                        <p>Our commitment is to enrich and support our clients to live their life with exceptional care and services wrapped with integrity and compassion, whilst appreciating our staff who embraces their services to their community with grace and courage. </p>
-                                        <div class="cta">
-                                            <button>Join Us</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="splide__slide">
-                        <div id="splide3">
-                            <div class="herotxt">
-                                <div>
-                                    <div class="h_t2">
-                                        <h1>Our Goal</h1>
-                                        <p>Our goal is to be No 1 staffing agency in Western Australia that is known for our hospitality to our clients and staff. </p>
-                                        <div class="cta">
-                                            <button>Join Us</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+        <div>
+            <div>
+                <div>
+                    <video class="vid" loop muted autoplay>
+                        <source src="Untitled design.mp4" type="video/mp4">
+                      </source>
+                </div> 
+                
+                <div class="back"></div>
+
+                <div class="container">
+                   <div>
+                    <h1>e4Healthcare</h1>
+                    <p class="goal"> Aged care staffing specialist in Western Australia, known for exceptional hospitality to both clients and staff.</p>
+                        <button class="join-us">Contact Us</button>
+                   </div>
+                </div>
             </div>
-        </section>
+        </div>
     </section>
 
 
     <section class="mainSection">
         <div class="headingTxt">
-            <h1>Services</h1>
+            <h1>Our <span style="color: #14a0f7;">Services</span></h1>
         </div>
         <main class="m2">
             <div class="servicesDiv">
-                <div class="servicesImg no1"></div>
-                <div class="servicesTxt">
-                    <h1>Aged Care Residential Facilities and Hospitals</h1>
+                <img src="Aged_care.jpg" alt="Aged Care Facilities and Hospitals">
+                <div class="card-content">
+                    <h3>Aged Care Facilities and Hospitals</h3>
+                    <a href="servicesAged.html" class="read-more">Read more →</a>
                 </div>
-                <button>Read more</button>
             </div>
             <div class="servicesDiv">
-                <div class="servicesImg no2"></div>
-                <div class="servicesTxt">
-                    <h1>Community care / Respite support</h1>
+                <img src="community.jpg" alt="Community care / Respite support">
+                <div class="card-content">
+                    <h3>Community care / Respite support</h3>
+                    <a href="servicesComm.html" class="read-more">Read more →</a>
                 </div>
-                <button>Read more</button>
             </div>
             <div class="servicesDiv">
-                <div class="servicesImg no3"></div>
-                <div class="servicesTxt">
-                    <h1>Mental health support programs</h1>
+                <img src="mental_care.jpg" alt="Mental health support programs">
+                <div class="card-content">
+                    <h3>Mental health support programs</h3>
+                    <a href="servicesMental.html" class="read-more">Read more →</a>
                 </div>
-                <button>Read more</button>
             </div>
             <div class="servicesDiv">
-                <div class="servicesImg no4"></div>
-                <div class="servicesTxt">
-                    <h1>Disability care support</h1>
+                <img src="disability_care.jpg" alt="Disability care support">
+                <div class="card-content">
+                    <h3>Disability care support</h3>
+                    <a href="serviceDisable.html" class="read-more">Read more →</a>
                 </div>
-                <button>Read more</button>
             </div>
             <div class="servicesDiv">
-                <div class="servicesImg no5"></div>
-                <div class="servicesTxt">
-                    <h1>Home care support</h1>
+                <img src="home_care.jpg" alt="Home care support">
+                <div class="card-content">
+                    <h3>Home care support</h3>
+                    <a href="servicesHome.html" class="read-more">Read more →</a>
                 </div>
-                <button>Read more</button>
             </div>
         </main>
     </section>
 
-    <section class="services__we__provide">
-        <header>
-            <h1>Services we provide included but limited to:</h1>
-        </header>
-
-        <div class="service__div">
-            <div class="sDiv">
-                <img src="ServicesNurse.jpg" alt="" width="200">
-                <h4>Registered Nurses</h4>
-            </div>
-            <div class="sDiv">
-                <img src="clicnicNurse.jpg" alt="" width="200">
-                <h4>Clinic Nurses</h4>
-            </div>
-            <div class="sDiv">
-                <img src="nursePractitioners.jpg" alt="" width="200">
-                <h4>Nurse Practitioners</h4>
-            </div>
-            <div class="sDiv">
-                <img src="enrolledNurse.jpg" alt="" width="200">
-                <h4>Enrolled Nurses</h4>
-            </div>
+    <div class="contactUs">
+        <div class="contactUsDiv">
+            <h1>We Care with Love and Respect</h1>
+            <p>Our Team Is Here To Help.</p>
+            <button onclick="contact()">Contact Us</button>
         </div>
-        <button class="sCta">See All Our Services &nbsp; <i class="fa-solid fa-arrow-right"></i></button>
-    </section>
+    </div>
 
     <section class="aboutUs">
         <div class="aboutUsDiv">
             <div class="abtTxt">
-                <h1>About <span style="color: var(--color2);">us</span></h1>
+                <h1>About <span style="color: #14a0f7;">Us</span></h1>
                 <p>e4 healthcare corporation is poised to deliver exceptional services to our clients while thoroughly engaging with them and their families in vital aspects of their care using our team of experienced and exceptional staff. Our competitive advantage is the high level of care we give to our clients and their families, and our dedication to our team. At e4 healthcare services our focus is to be consistent in providing our client with experiences staff that thrives in delivery excellent services, for client live enrichment, while actively engaging our client and their family to achieve epitome health satisfaction.</p>
-                <button class="abtCta">Read more <i class="fa-solid fa-arrow-right"></i></button>
+                <button onclick="abtUs()" class="abtCta">Read more</button>
             </div>
             <div class="abtImg"></div
         </div>
     </section>
 
-    <div class="contactUs">
-        <div class="contactUsDiv">
-            <h1>Ready to start your journey to <span style="box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.226); scale: 10;">wellness</span></h1>
-            <p>Our caring team is here to help.</p>
-            <button>Reach Out To Us  <i class="fa fa-arrow-right fa-shake" aria-hidden="true"></i> </button>
-        </div>
-    </div>
 
+
+    <section class="services__we__provide">
+        <header>
+            <h1>Services we provide included <span class="h11">but limited to</span></h1>
+        </header>
+
+        <div class="service__div">
+            <div class="sDiv">
+                <img src="Registered Nurses2.jpg" alt="" width="200">
+                <h4>Registered Nurses</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Clinic Nurses.jpg" alt="" width="200">
+                <h4>Clinic Nurses</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Nurse Practitioners.jpg" alt="" width="200">
+                <h4>Nurse Practitioners</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Enrolled Nurses.jpg" alt="" width="200">
+                <h4>Enrolled Nurses</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Assistants in Nursing (Carers_ PCAΓÇÖs).jpg" alt="" width="200">
+                <h4>Assistants in Nursing</h4>
+                <p style="font-size: 12px;text-align: center;">(Carers/ PCA’s)</p>
+            </div>
+            <div class="sDiv">
+                <img src="Support Workers (Disability, Community and Mental health).jpg" alt="" width="200">
+                <h4>Support Workers</h4>
+                <p style="font-size: 12px;text-align: center;">(Disability, Community and Mental health)</p>
+            </div>
+            <div class="sDiv">
+                <img src="Healthcare Endorsed Chefs and Cooks.jpg" alt="" width="200">
+                <h4>Healthcare Endorsed Chefs and Cooks</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Catering Assistants.jpg" alt="" width="200">
+                <h4>Catering Assistants</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Kitchen hands.jpg" alt="" width="200">
+                <h4>Kitchen hands</h4>
+            </div>
+            <div class="sDiv">
+                <img src="Cleaners.jpg" alt="" width="200">
+                <h4>Cleaners</h4>
+            </div>
+        </div>
+        <!-- <button class="sCta">See All Our Services &nbsp; <i class="fa-solid fa-arrow-right"></i></button> -->
+    </section>
+    
     <footer>
         <div class="footerContext">
             <div class="services">
-                <img src="e4-logo.png" alt="" width="200">
+                <img src="e4 original logo white.png" alt="" width="150">
+                <p>e4 healthcare corporation is poised to deliver exceptional services to our clients while thoroughly engaging with them and their families in vital aspects of their care using our team of experienced and exceptional staff.</p>
             </div>
             <div class="services">
                 <h2>Services</h2>
+                <hr>
                 <div class="fs">
-                    <a href="#">Aged care residential facility and hospitals</a>
-                    <a href="#">Community Care/Respite Support</a>
-                    <a href="#">Home Care Support</a>
-                    <a href="#">Mental Health Support Programs</a>
-                    <a href="#">Disability Care Support</a>
+                    <a href="servicesAged.html">Aged care residential facility and hospitals</a>
+                    <a href="servicesComm.html">Community Care/Respite Support</a>
+                    <a href="servicesHome.html">Home Care Support</a>
+                    <a href="servicesMental.html">Mental Health Support Programs</a>
+                    <a href="serviceDisable.html">Disability Care Support</a>
                 </div>
             </div>
             <div class="contact">
                 <h2>Contact</h2>
+                <hr>
                 <div class="fs">
-                    <p>Email : admin@e4healthcare.info</p>
-                    <p>Phone : 0411 156 749</p>
-                    <p>Address : Perth western Australia. </p>
+                    <p>For all staff bookings and general enquiries please call 0411 156 749 alternatively, email your request or enquiry to admin@e4healthcare.info</p> <br>
+                    <p>Monday to Friday 8:30am- 6pm</p> <br>
+                    <p>Monday to Sunday (24 hours Staff Bookings Only)</p>
                 </div>
-                <div class="links">
+                <!-- <div class="links">
                     <a href=""><i class="fa-brands fa-facebook"></i></a>
                     <a href=""><i class="fa-brands fa-instagram"></i></a>
                     <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                </div>
+                </div> -->
             </div>
         </div>  
+        <hr>
+        <div class="lstDiv">
+            <p>© Copyright 2024 | All Rights Reserved by e4Healthcare</p>
+        </div>
     </footer>
     
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
-        var splide1 = new Splide( '#splide', {
-            autoplay: 'true',
-            type: 'fade',
-            rewind: true,
+        var splide = new Splide( '.splide', {
+            type   : 'loop',
+            perPage: 3,
+            focus  : 'center',
         } );
-        splide1.mount();
 
-        var splide2 = new Splide( '#splide2', {
-            autoplay: 'true',
-            type: 'fade',
-            rewind: true,
-        } );
-        splide2.mount();
+        splide.mount();
     </script>
 </body>
 </html>

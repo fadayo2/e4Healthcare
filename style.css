@@ -24,7 +24,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: .5s;
+    transition: .2s;
 }
 
 body {
@@ -62,6 +62,19 @@ body {
     transition: transform 0.15s ease;
 }
 
+.scrolled {
+    background-color: white;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.329);
+}
+
+.scrolled .navLinks a {
+    color: black;
+}
+
+.scrolled .navLinks .link {
+    color: black;
+}
+
 .navbar {
     top: 0;
     width: 100vw;
@@ -71,8 +84,20 @@ body {
     align-items: center;
     justify-content: space-around;
     z-index: 999;
+    background-color: none;
+    border-bottom: .5px solid rgba(255, 255, 255, 0.336);
+}
+
+.navbar:hover {
     background-color: white;
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.247);
+
+    .navLinks a {
+        color: black;
+    }
+
+    .navLinks .link {
+        color: black;
+    }
 }
 
 .logo {
@@ -84,17 +109,76 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 18px;
     font-weight: var(--boldFont);
-    width: 900px;
-    color: var(--color3);
+    width: fit-content;
     margin-top: .5rem;
+    column-gap: 7vw;
+}
+
+.navLinks .link {
+    font-size: calc(.9vw + .9vh);
+    color: white;
+    width: fit-content;
+}
+
+.navLinks a {
+    color: white;
 }
 
 .navLinks .link {
     cursor: pointer;
     position: relative;
     height: 40px;
+}
+
+.red-button {
+    background-color: gold;
+    color: black;
+    height: 40px;
+    width: 130px;
+    padding: 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-weight: 600;
+    font-family: 'Trebuchet MS';
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Poppins", sans-serif;
+    z-index: 20;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -10rem;
+    top: 4rem;
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+    margin-top: 0px;
+}
+
+
+.red-button:hover{
+    scale: 1.05;
 }
 
 .navbar i {
@@ -114,10 +198,84 @@ body {
 }
 
 .herosection {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     /* position: fixed; */
     width: 100vw;
     height: 100vh;
+}
+
+.vid{
+    object-fit: cover; 
+    width: 100vw;
+    height: 100vh;  
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -10;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;  
+    background: linear-gradient(to right, rgb(0, 0, 0) -10%, rgba(0, 0, 0, 0) 90%);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 5rem;
+    padding-top: 5rem;
+}
+
+.container div {
+    height: fit-content;
+    width: 530px;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.container div h1 {
+    font-size: calc(3.2vw + 3.2vh);
+    color: white;
+    font-weight: 300;
+}
+
+.container div p {
+    display: flex;
+    font-size: 1.5vw; 
+    font-weight: light;
+    color: white;
+    line-height: 1.6; 
+    font-smooth: always;
+    line-height: 2rem;
+}
+
+.container div button {
+    background-color:  #14a0f7;
+    color: white;
+    width: 150px;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s;
+    animation-timing-function: ease;
+}
+
+.container div button:hover {
+    background-color: #ffcc00; 
+    scale: 1.05;
+    color: black;
+    border-radius: 0px;
 }
 
 #splide1 {
@@ -220,8 +378,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color2);
-    font-size: 20px;
+    color: black;
+    font-size: calc(1.3vw + 1.3vh);
+}
+
+.headingTxt h1 {
+    font-weight: 500;
 }
 
 .m2 {
@@ -230,127 +392,90 @@ body {
     background-color: #ffff;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 2rem;
     padding: 3rem;
-    padding-bottom: 10rem;
+    padding-bottom: 0rem;
 }
 
 .m2 .servicesDiv {
-    width: 400px;
-    height: 300px;
     /* border: 1px solid black; */
     border-radius: 10px;
     box-shadow: 0px 0px 10px 1px rgba(3, 59, 78, 0.164);
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
     flex-direction: column;
     background-color: white;
     transition: .5;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
     position: relative;
     cursor: pointer;
+    width: 375px;
+    height: 400px;
+    /* overflow: hidden; */
+    transition: transform 0.2s;
 }
 
-.m2 .servicesDiv::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 30px;
-    height: 30px;
-    background-color: var(--color2);
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 20px;
+.m2 .servicesDiv img {
+    object-fit: cover;
+    width: 100%;
+    height: 270px;
 }
 
-.servicesDiv .servicesTxt {
-    /* border: 1px solid; */
-    width: 300px;
-    font-weight: 500;
+.servicesDiv .card-content {
     text-align: center;
+    width: inherit;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.servicesDiv .servicesTxt h1 {
-    font-size: 18px;
+.m2 .servicesDiv .card-content h3 {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    text-wrap: wrap;
 }
 
-.servicesDiv .servicesImg {
-    width: 120px;
-    height: 120px;
-    border-radius: 30%;
-    /* border: 1px solid; */
-    position: relative;
-    top: -80px;
-    background-color: white;
-    margin-bottom: -5rem;
+.servicesDiv .card-content a {
+    text-decoration: none;
+    color: #14a0f7;
+    font-weight: bold;
+}
+
+.servicesDiv .card-content a:hover{
+    text-decoration: underline;
+    color: #193d6a;
 }
 
 .servicesDiv:hover {
-    .servicesImg {
-        scale: 1.5;
-        border-radius: 0;
-        box-shadow: 0px 0px 10px 1px rgba(3, 59, 78, 0.164);
-    }
-}
-
-.no1 {
-    background-image: url(Aged_care.jpg);
-    background-size: cover;
-}
-
-.no2 {
-    background-image: url(community.jpg);
-    background-size: cover;
-}
-
-.no3 {
-    background-image: url(mental_care.jpg);
-    background-size: cover;
-}
-
-.no4 {
-    background-image: url(disability_care.jpg);
-    background-size: cover;
-}
-
-.no5 {
-    background-image: url(home_care.jpg);
-    background-size: cover;
-}
-
-.servicesDiv button { 
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(124, 229, 247);
-    transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
-    cursor: pointer;
-    font-weight: 550;
-    font-family: var(--fontFamily);
-}
-
-.servicesDiv button:hover {
-    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.411);
-}
-
-#centerDiv {
-    position: relative;
-    /* height: 500px; */
+    transform: translateY(-5px);
 }
 
 header {
-    justify-content: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding-left: 2rem;
     z-index: 15;
 }
 
 header h1 {
-    font-size: calc(1.5vw + 1.5vh);
+    font-size: calc(2vw + 2vh);
     font-weight: 500;
-    color: var(--color2);
+}
+
+header .h11 {
+    color: #14a0f7;
+    background: linear-gradient(to right, #14a0f7, #0d6ef0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .services__we__provide {
@@ -358,46 +483,51 @@ header h1 {
     height: auto;
     display: grid;
     gap: 2rem;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .service__div {
-    width: inherit;
+    width: 95vw;
     /* border: inherit; */
     height: fit-content;
-    display: grid;
+    display: flex;
     align-items: center;
-    justify-content: space-around;
-    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* grid-template-columns: auto auto auto auto auto; */
     margin-bottom: 3rem;
     margin-top: 3rem;
-    gap: 3rem;
+    row-gap: 3rem;
 }
 
-
 .service__div .sDiv {
-    width: 400px;
-    height: 400px;
+    width: 230px;
+    height: 270px;
     background-color: white;
     border-radius: 11px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: start;
     flex-direction: column;
     font-family: var(--fontFamily);
     font-weight: 300;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.199);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.199);
     transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
 }
 
-.service__div .sDiv:hover {
-    img {
-        transform: scale(1.1) translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    }
+.service__div .sDiv h4 {
+    font-weight: 500;
+    text-align: center;
 }
 
-.services__we__provide .sDiv img {
-    border-radius: 20px;
+.service__div .sDiv img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 2rem;
 }
 
 .services__we__provide .sCta {
@@ -425,112 +555,161 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(abstract-timekeeper.svg);
     background-size: cover;
 }
 
 .aboutUs .aboutUsDiv {
     border-radius: 10px;
-    width: 90vw;
+    width: 95vw;
     height: fit-content;
     display: flex;
     align-items: start;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.925);
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.308);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 .aboutUsDiv .abtTxt {
     height: fit-content;
-    width: 35vw;
+    width: 30vw;
     padding-left: 2rem;
 }
 
 .abtTxt h1 {
     font-size: 40px;
     font-weight: 400;
-    margin-bottom: 3rem;
+    margin-bottom: rem;
 }
 
 .abtTxt p { 
-    line-height: 2rem;
+    line-height: 1.8rem;
+    font-size: 14px;
 }
 
 .abtCta {
-    padding: 10px;
-    border-radius: 10px;
+    background-color:  #14a0f7;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Poppins", sans-serif;
+    transition: 0.6s;
     border: none;
     margin-top: 2rem;
-    cursor: pointer;
-    background-color: #7ce5f7;
-    font-weight: var(--boldFont);
+}
+
+.abtCta:hover {
+    background-color: #ffcc00;
+    border-radius: 0px;
+    color: black;
 }
 
 .aboutUsDiv .abtImg {
     height: 90vh;
-    width: 50vw;
-    background-image: url(aboutUs.jpg);
+    width: 60vw;
+    background-image: url(abtme.jpg);
     background-size: cover;
     display: block;
 }
 
 .contactUs {
-    margin-top: 8rem;
-    height: 400px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(135deg, #FFcc00, #FFB14E); 
+    width: 100vw;
 }
 
 .contactUs .contactUsDiv {
-    height: 300px;
-    width: 80vw;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
-    background-color: #47bbcf;
     color: white;
-    border-radius: 20px;
-    box-shadow: inset 0 0 10px rgb(0, 0, 0);
+    height: 400px;
 }
 
 .contactUsDiv h1 {
     text-transform: capitalize;
-    font-size: calc(1.8vw + 1.8vh);
-    font-weight: 400;
+    font-size: calc(2.2vw + 2.2vh);
+    font-weight: 500;
+    color: black;
 }
 
 .contactUsDiv p {
     font-size: 20px;
     text-transform: capitalize;
-    font-size: calc(1vw + 1vh);
+    font-size: calc(1.2vw + 1.2vh);
+    color: black;
 }
 
 .contactUsDiv button {
     padding: 15px;
     border: none;
-    width: 200px;
+    background-color: white;
+    border: 2px solid #FF8C00; 
+    border-radius: 25px;
+    color: #FF8C00; 
     font-size: 16px;
-    border-radius: 10px;
+    margin-top: 30px;
+    padding: 15px 30px;
     cursor: pointer;
-    background-color: var(--color2);
-    font-weight: bolder;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.24);
-    color: white !important;
-    transition: .3s;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contactUsDiv button:hover {
-    scale: 1.05;
+    background-color: #FF8C00;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+    transform: scale(1.05); 
+}
+
+.splide {
+    width: 100vw;
+}
+
+#splide__track {
+    height: 80vh;
+    /* background-color: teal; */
+}
+
+#splide__track .splide__slide {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    width: 400px;
+}
+
+/* #splide__list {
+    width: 100vw;
+} */
+
+.splide__slide div {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.253);
 }
 
 footer {
     height: fit-content;
-    background-image: url(pattern.svg);
     /* background-color: var(--color2); */
     background-size: cover; 
     /* color: white; */
+    background-color: #080540;
 }
 
 footer .footerContext {
@@ -545,16 +724,18 @@ footer .footerContext {
 }
 
 .footerContext .services {
-    width: 400px;
+    width: 300px;
     height: fit-content;
     display: grid;
     align-items: center;
     justify-content: space-around;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 2rem 0 0rem 0;
+    color: white;
 }
 
 .footerContext .contact {
+    color: white;
     width: 400px;
     height: fit-content;
     /* border: 1px solid; */
@@ -570,28 +751,8 @@ footer .footerContext {
     align-items: center;
     justify-content: space-around;
     height: fit-content;
-    gap: 2rem;
-    /* color: white; */
-}
-
-.contact .links {
-    /* padding: 10px; */
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.contact .links a {
-    padding: 10px;
-    display: block;
-    width: 50px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    text-decoration: none;
-    color: var(--color2) !important;
+    gap: 0rem;
+    color: white;
 }
 
 .footerContext .services .fs {
@@ -599,7 +760,7 @@ footer .footerContext {
     align-items: center;
     justify-content: space-around;
     height: fit-content;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .footerContext h2{
@@ -608,9 +769,22 @@ footer .footerContext {
 }
 
 .services .fs a{
-    color: black;
+    color: white;
     text-decoration: none;
     /* color: var(--color1); */
+}
+
+.services .fs a:hover {
+    text-decoration: underline;
+}
+
+.lstDiv {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
 }
 
 
@@ -622,46 +796,26 @@ footer .footerContext {
         display: none;
     }
     .herosection {
-        height: 700px;
+        height: 50vh;
     }
-    .herosection section {
-        height: 600px;
-    }
-    .herotxt {
-        padding-top: 1rem;
-        align-items: start;
-        height: 600px;
-    }
-    .herotxt .h_t2 {
-        /* border: 1px solid black; */
-        width: 100vw;
-        height: 420px;
+    .container {
+        height: 50vh;
         align-items: center;
+        padding-left: 0;
+        padding-top: 0;
         justify-content: center;
-        /* background-color: rgba(255, 255, 255, 0.26); */
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
     }
-    .h_t2 p {
-        text-align: center;
+    .container div {
+        align-items: center;
+        width: 90vw;
+        gap: 2rem;
     }
     header {
         margin-top: 2rem;
     }
-    .provide__div {
-        position: sticky;
-        top: 120px;
-    }
-    .provide__div .stickDiv {
-        transform: rotate(0deg) !important;
-        /* border: 1px solid; */
-    }
     .services__we__provide .service__div {
         height: fit-content;
-        gap: 3rem;
-    }
-    .service__div .sDiv {
-        width: 40vw;
+        /* gap: 3rem; */
     }
     .aboutUs .aboutUsDiv {
         width: 100vw;
@@ -704,9 +858,49 @@ footer .footerContext {
     }
 }
 
+@media (max-width: 768px) {
+    .navLinks {
+        display: none;
+    }
+    .navbar i {
+        display: block !important;
+        font-size: 25px !important;
+    }
+    #cancel {
+        display: none !important;
+    }
+    .drpDiv {
+        display: block;
+        width: 100vw;
+        background-color: white;
+        color: black;
+        font-weight: var(--boldFont);
+        position: fixed;
+        top: 5rem;
+        display: grid;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        height: 0px;
+        transition: .5s;
+        transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
+        overflow: hidden;
+        z-index: 888;
+    }
+}
+
 @media (max-width: 600px) {
     .herosection {
-        height: 500px;
+        height: 70dvh;
+    }
+    .container {
+        height: 70dvh;
+        align-items: end;
+        padding-bottom: 3rem;
+    }
+    .container div p {
+        font-size: 16px;
+        text-align: center;
     }
     .navLinks {
         display: none;
@@ -800,18 +994,7 @@ footer .footerContext {
         width: 100vw;
     }
     .services__we__provide .service__div {
-        padding: 2rem 0 2rem 0rem;
-        grid-template-columns: auto;
         height: fit-content;
-        gap: 3rem;
-    }
-
-    .service__div .sDiv {
-        width: 90vw;
-        height: 400px;
-    }
-    .service__div .sDiv img {
-        width: 170px;
     }
 
     .aboutUsDiv {

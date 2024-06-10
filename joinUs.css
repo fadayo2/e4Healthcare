@@ -1,0 +1,83 @@
+.__txt h1{
+    font-weight: 350;
+    font-size: calc(3vw + 3vh);
+}
+
+.__herosection {
+    width: 100vw;
+    height: 90vh;
+    background-image: url(join.jpg);
+    background-size: cover;
+}
+
+.__herosection .__txt {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right , rgba(0, 0, 0, 0.808) , rgba(0, 0, 0, 0.116) , rgba(0, 0, 0, 0));
+    display: flex;
+    align-items: center;
+    padding-left: 6rem;
+    padding-top: 10rem;
+    color: white;
+}
+.joinMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    /* flex-direction: column; */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.joinMain div {
+    width: 80vw;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.joinMain div button {
+    padding: 15px;
+    width: 150px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: var(--color2);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+}
+
+.joinMain div button:hover {
+    background-color: gold;
+    color: black;
+    border-radius: 0px;
+}
+
+.joinMain .ul1 li {
+    list-style-type: none;
+}
+
+.joinMain ul {
+    margin-left: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .__herosection {
+        height: 50vh;
+        background-size: cover;
+    }
+    .__herosection .__txt {
+        align-items: end;
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 0;
+        height: 50vh;
+        padding-bottom: 6rem;
+    }
+}

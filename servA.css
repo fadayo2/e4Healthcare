@@ -1,0 +1,115 @@
+.__txt h1{
+    font-weight: 350;
+    font-size: calc(2.7vw + 2.7vh);
+}
+
+.__herosection {
+    width: 100vw;
+    height: 90vh;
+    background-image: url(AGEDCJJ.jpg);
+    background-size: cover;
+}
+
+.__herosection .__txt {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right , rgba(0, 0, 0, 0.808) , rgba(0, 0, 0, 0.116) , rgba(0, 0, 0, 0));
+    display: flex;
+    align-items: center;
+    padding-left: 6rem;
+    padding-top: 10rem;
+    color: white;
+}
+
+.main {
+    /* margin-top: 3rem; */
+    height: fit-content;
+    width: initial;
+    /* border: 1px solid black; */
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.maindiv {
+    height: 500px;
+    width: 90vw;
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+}
+
+.maindiv img {
+    width: 50%;
+}
+
+.mainTxt {
+    width: 520px;
+    height: fit-content;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+    color: #666666;
+}
+
+.mainTxt h1 {
+    font-size: calc(1.2vw + 1.2vh);
+    margin-bottom: 1.5rem;
+}
+
+.mainTxt p {
+    font-size: 16px;
+}
+
+.mt {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 1024px) {
+    .__herosection {
+        height: 50vh;
+        background-size: cover;
+    }
+    .__herosection .__txt {
+        align-items: end;
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 0;
+        height: 50vh;
+        padding-bottom: 6rem;
+    }
+    .main {
+        padding-left: 0;
+        gap: 3rem;
+    }
+    .maindiv {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: fit-content;
+        gap: 2rem;
+    }
+    .mainTxt {
+        width: 80vw;
+        margin: auto;
+    }
+    .maindiv img {
+        margin: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .maindiv img {
+        margin: auto;
+        width: 80%;
+    }
+    .maindiv h1 {
+        font-size: calc(1.5vw + 1.5vh);
+    }
+}

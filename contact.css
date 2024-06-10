@@ -1,0 +1,37 @@
+.__txt h1{
+    font-weight: 350;
+    font-size: calc(2.7vw + 2.7vh);
+}
+
+.__herosection {
+    width: 100vw;
+    height: 90vh;
+    background-image: url(contactus.jpg);
+    background-size: cover;
+}
+
+.__herosection .__txt {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right , rgba(0, 0, 0, 0.808) , rgba(0, 0, 0, 0.116) , rgba(0, 0, 0, 0));
+    display: flex;
+    align-items: center;
+    padding-left: 6rem;
+    padding-top: 10rem;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .__herosection {
+        height: 50vh;
+        background-size: cover;
+    }
+    .__herosection .__txt {
+        align-items: end;
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 0;
+        height: 50vh;
+        padding-bottom: 6rem;
+    }
+}

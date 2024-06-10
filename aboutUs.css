@@ -4,54 +4,28 @@
     box-sizing: border-box;
 }
 
-.about__herosection {
-    /* border: 1px solid black; */
-    height: 50vh;
-    margin-top: 6rem;
-    background-image: url(banner.jpg);
+
+.__txt h1{
+    font-weight: 350;
+    font-size: calc(3vw + 3vh);
+}
+
+.__herosection {
+    width: 100vw;
+    height: 90vh;
+    background-image: url(abtUs.jpg);
     background-size: cover;
-    margin-bottom: 6rem;
 }
 
-.falling-text-container {
-    position: relative;
-    width: 40vw;
-    height: 40%;
+.__herosection .__txt {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right , rgba(0, 0, 0, 0.808) , rgba(0, 0, 0, 0.116) , rgba(0, 0, 0, 0));
     display: flex;
-    align-items: start;
-    justify-content: center;
-}
-
-.falling-letter {
-    position: absolute;
-    font-size: calc(4vw + 4vh); /* Responsive font size */
-    animation: fall .7s ease-in-out forwards;
-    opacity: 0; 
-}
-
-.special-letter {
-    color: var(--color2);
-}
-
-
-@keyframes fall {
-    0% {
-        top: -100px;
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        top: 50%;
-        opacity: 1;
-        transform: translateY(-50%);
-    }
-}
-
-
-.about__herosection .mobileTxt {
-    display: none;
+    align-items: center;
+    padding-left: 6rem;
+    padding-top: 10rem;
+    color: white;
 }
 
 .about__main {
@@ -61,13 +35,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 4rem;
+    margin-bottom: -8rem;
 }
 
 .about__main .about__Txt {
     width: 90vw;
     height: 90vh;
-    background-color: rgba(255, 255, 255, 0.842);
+    /* background-color: rgba(255, 255, 255, 0.842); */
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -94,15 +68,35 @@
     align-items: start;
     justify-content: space-around;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .abt_2 .about__Txt {
     flex-direction: row;
 }
 
+.abt_6 {
+    margin-bottom: 5rem;
+}
+
+.abt_6 .about__img {
+    background-image: url(goals.jpg);
+}
+
+.abt_5 .about__Txt {
+    flex-direction: row;
+}
+
 .abt_2 .about__img {
     background-image: url(aim\ \(2\).jpg);
+}
+
+.abt_4 .about__img{
+    background-image: url(vision.jpg);
+}
+
+.abt_5 .about__img {
+    background-image: url(mission.jpg);
 }
 
 .abt_3 {
@@ -233,11 +227,21 @@
 }
 
 @media (max-width: 1024px) {
-    .about__herosection {
-        height: 30svh;
+    .__herosection {
+        height: 50vh;
+        background-size: cover;
+    }
+    .__herosection .__txt {
+        align-items: end;
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 0;
+        height: 50vh;
+        padding-bottom: 6rem;
     }
     .about__main {
         height: fit-content;
+        margin-bottom: 0rem;
     }
     .about__main .about__Txt {
         padding-top: 3rem;
@@ -273,10 +277,6 @@
 }
 
 @media (max-width: 600px) {
-    .about__herosection .mobileTxt h1{
-        font-weight: 500;
-        font-size: calc(4vw + 4vh);
-    }
     .about__main {
         padding-left: 0rem;
     }
