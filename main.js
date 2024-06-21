@@ -3,13 +3,15 @@ let cancel = document.getElementById('cancel');
 let menu = document.getElementById('menu');
 
 const drpD = () => {
-    drpDown.style.height = '500px';
+    drpDown.style.width = '75vw';
+    drpDown.style.padding = '20px'
     menu.style.cssText = 'display : none !important ;'
     cancel.style.cssText = 'display : block !important ;'
 };
 
 const drpU = () => {
-    drpDown.style.height = '0px';
+    drpDown.style.width = '0px';
+    drpDown.style.padding = '0px'
     menu.style.cssText = 'display : block !important ;'
     cancel.style.cssText = 'display : none !important ;'
 };
@@ -96,4 +98,27 @@ function contact(){
 
 function abtUs(){
     location.href = 'aboutUs.html';
+}
+
+function sendEmail() {
+    const recipient = "admin@e4healthcare.info";
+    const subject = "Inquiry";
+    const body = "Dear e4Healthcare,";
+
+    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+let arrow = document.getElementById('arrow');
+
+function drpdrp() {
+    const drpbtn = document.getElementById('drpdrp');
+
+    if (drpbtn.style.height === '0px' || drpbtn.style.height === '') {
+        drpbtn.style.display = 'grid';
+        drpbtn.style.height = '200px';
+        arrow.style.cssText = 'transform : rotate(180deg) !important ;'
+    } else {
+        drpbtn.style.height = '0px';
+        arrow.style.cssText = 'transform : rotate(360deg) !important ;'
+    }
 }

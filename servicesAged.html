@@ -11,9 +11,15 @@
 </head>
 <body>
     
+    <!-- custom cursor  -->
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-trail"></div>
+
+    <!-- custom cursor -->
 
     <nav id="navbar" class="navbar">
-        <a class="logo" href="index.html"><img src="e4-logo.png" alt="" width="130"></a>
+        <a class="logo" href="index.html"><img src="e4 original logo.png" alt="" width="100"></a>
 
         <div class="navLinks">
             <a style="text-decoration: none;" href="index.html"><div class="link">Home</div></a>
@@ -40,18 +46,19 @@
 
     <div id="drpdown" class="drpDiv">
         <a style="text-decoration: none;color: black;" href="index.html"><div class="link">Home</div></a>
-        <a style="text-decoration: none;color: black;" href=""><div class="link">Services</div></a>
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-        <hr>
-        <a style="text-decoration: none;color: var(--color2);" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
-        <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
-        <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
-        <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
-        <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
-        <hr>
+        <div onclick="drpdrp()" class="link">Services <i id="arrow" class="fa-solid fa-caret-down"></i></div>
+        <!-- <i class="fa fa-arrow-down" aria-hidden="true"></i> -->
+        <div id="drpdrp" class="drpdrp">
+            <a style="text-decoration: none;color: var(--color2);" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
+            <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
+            <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
+            <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
+            <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
+        </div>
         <a style="text-decoration: none;color: black;" href="aboutUs.html"><div class="link">About us</div></a>
         <a style="text-decoration: none;color: black;" href="joinUs.html"><div class="link">Join us</div></a>
         <a style="text-decoration: none;color: black;" href="contact.html"><div class="link">Contact us</div></a>
+        <button onclick="dialNumber('0411156749')" class="red-button2">0411 156 749</button>
     </div>
 
     <section class="__herosection"> 
@@ -62,31 +69,36 @@
 
     <main class="main">
         <div class="maindiv">
-            <img src="agedccuu.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Collaborate to support clients’ care needs</h1>
-                <p>Aged care residential facilities and hospitals work closely together to provide comprehensive care for clients, ensuring that their medical, emotional, and social needs are met effectively. Care teams from both settings communicate and share important information to provide continuity of care for clients transitioning between aged care homes and hospitals, leading to improved overall well-being and outcomes by ensuring they receive coordinated and integrated care.</p>
+            <div class="im">
+                <img src="agedcare 33.jpg" alt="" width="">
+            </div>
+            <div class="mtt">
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Collaborating closely to meet the care needs of our clients.</h1>
+                </div>
+                <hr>
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>
+                        Providing comprehensive nursing care for clients in aged care homes or those recuperating in hospitals.</h1>
+                </div>
             </div>
         </div>
         <div class="maindiv mt">
-            <img src="AGEDCJJtt.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Provide nursing care for clients in aged care homes or recovering in hospitals</h1>
-                <p>Skilled nurses in aged care residential facilities and hospitals assess, plan, implement, and evaluate care to ensure the health and safety of clients. They work collaboratively with other healthcare professionals to provide holistic care, coordinating treatments, medications, and therapies for each client's individual needs.</p>
+            <div class="im">
+                <img src="agedcare 44.jpg" alt="" width="">
             </div>
-        </div>
-        <div class="maindiv">
-            <img src="agedcare 33.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Experienced healthcare workers assist with daily living activities and medication management</h1>
-                <p>Experienced healthcare workers in aged care residential facilities and hospitals provide essential assistance to clients with daily living activities, medication management, and overall well-being. They support clients with tasks like bathing, dressing, grooming, and eating, ensure proper medication administration, monitor for side effects, and communicate any concerns to nursing staff. This dedicated support promotes independence, dignity, and enhances the quality of life for each individual through personalized care and attention.</p>
-            </div>
-        </div>
-        <div class="maindiv mt">
-            <img src="agedcare 44.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Staff are available for various shifts and leave coverage</h1>
-                <p>Aged care residential facilities and hospitals operate 24/7 with staff working various shifts to provide round-the-clock care. This includes covering for colleagues on leave to ensure continuity of care and adequate staffing levels. The flexibility in scheduling and staffing enables consistent, high-quality care for clients at all times.</p>
+            <div class="mtt">
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Assisting with daily living activities and managing medications through experienced healthcare workers</h1>
+                </div>
+                <hr>
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Offering flexible staffing solutions, with staff available for various shifts and leave coverages.</h1>
+                </div>
             </div>
         </div>
     </main>

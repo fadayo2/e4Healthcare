@@ -3,24 +3,121 @@
     font-size: calc(3vw + 3vh);
 }
 
+.navbar {
+    background-color: white;
+}
+
+.navLinks .link {
+    color: black;
+}
+
 .__herosection {
     width: 100vw;
-    height: 90vh;
+    height: 75vh;
     background-image: url(join.jpg);
     background-size: cover;
 }
-
 .__herosection .__txt {
     width: inherit;
     height: inherit;
-    background: linear-gradient(to right , rgba(0, 0, 0, 0.808) , rgba(0, 0, 0, 0.116) , rgba(0, 0, 0, 0));
+    background: linear-gradient(to right , rgb(0, 0, 0) , rgba(0, 0, 0, 0.87) , rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0));
     display: flex;
     align-items: center;
     padding-left: 6rem;
     padding-top: 10rem;
     color: white;
 }
+
+.abt_3 {
+    margin: auto;
+    margin-top: 3rem;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 1px solid green; */
+}
+
+.abt_3 .Txt {
+    width: 500px;
+    /* border: 1px solid; */
+    padding: 10px;
+}
+
+.abt_3 .img {
+    width: 400px;
+    /* border: 1px solid red; */
+    height: 400px;
+    border-radius: 20px;
+    background-image: url(joinUs.jpg);
+    background-size: cover;
+}
+
+.abt_3 .Txt h1 {
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+.abt_3 .Txt p {
+    font-size: 15px;
+    color: rgb(75, 75, 75);
+    margin-bottom: 1rem;
+}
+
+.abt_3 .Txt ol {
+    margin-left: 1rem;
+    list-style-type: disc;
+    font-size: 15px;
+    color: rgb(75, 75, 75);
+    /* margin-bottom: 1rem; */
+}
+
+.abt_3 .Txt button {
+    padding: 10px;
+    width: 130px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: var(--color2);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.abt_3 .Txt button:hover {
+    background-color: var(--color3);
+    border-radius: 0px;
+}
+
+.abt_4 {
+    flex-direction: row-reverse;
+    margin-bottom: 3rem;
+}
+
+.abt_4 .imgOv {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1.6rem;
+}
+
+.abt_4 .imgOv .img:nth-child(1) {
+    transform: rotate(-4deg);
+    background-image: url(vision.jpg);
+}
+
+.abt_4 .imgOv .img:nth-child(2) {
+    transform: rotate(4deg);
+    background-image: url(join-2.jpg);
+}
+
 .joinMain {
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,11 +125,12 @@
     /* flex-direction: column; */
     padding-top: 3rem;
     padding-bottom: 3rem;
+    width: 80vw;
 }
 
 .joinMain div {
-    width: 80vw;
-    /* border: 1px solid black; */
+    width: 73vw;
+    border: 1px solid black;
     display: flex;
     align-items: start;
     justify-content: space-around;
@@ -41,10 +139,10 @@
 }
 
 .joinMain div button {
-    padding: 15px;
-    width: 150px;
+    padding: 10px;
+    width: 130px;
     border: none;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 5px;
     background-color: var(--color2);
     color: white;
@@ -54,14 +152,11 @@
 }
 
 .joinMain div button:hover {
-    background-color: gold;
-    color: black;
+    background-color: var(--color3);
+    color: white;
     border-radius: 0px;
 }
 
-.joinMain .ul1 li {
-    list-style-type: none;
-}
 
 .joinMain ul {
     margin-left: 1.5rem;
@@ -79,5 +174,29 @@
         padding-top: 0;
         height: 50vh;
         padding-bottom: 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .abt_4 .imgOv {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .abt_3 {
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+    .abt_3 .Txt {
+        width: inherit;
+    }
+    .abt_3 .img {
+        height: 200px;
+        width: inherit;
+    }
+    .abt_4 .imgOv {
+        display: none;
     }
 }

@@ -1,3 +1,4 @@
 function redirect() {
-    location.href = 'quiz.html';
+    const url = "quiz.html";
+    window.open(url, '_blank').focus();
 }

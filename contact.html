@@ -10,8 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+    <!-- custom cursor  -->
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-trail"></div>
+
+    <!-- custom cursor -->
+
+
     <nav id="navbar" class="navbar">
-        <a class="logo" href="index.html"><img src="e4-logo.png" alt="" width="130"></a>
+        <a class="logo" href="index.html"><img src="e4 original logo.png" alt="" width="100"></a>
 
         <div class="navLinks">
             <a style="text-decoration: none;" href="index.html"><div class="link">Home</div></a>
@@ -38,18 +47,19 @@
 
     <div id="drpdown" class="drpDiv">
         <a style="text-decoration: none;color: black;" href="index.html"><div class="link">Home</div></a>
-        <a style="text-decoration: none;color: black;" href=""><div class="link">Services</div></a>
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-        <hr>
-        <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
-        <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
-        <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
-        <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
-        <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
-        <hr>
+        <div onclick="drpdrp()" class="link">Services <i id="arrow" class="fa-solid fa-caret-down"></i></div>
+        <!-- <i class="fa fa-arrow-down" aria-hidden="true"></i> -->
+        <div id="drpdrp" class="drpdrp">
+            <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
+            <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
+            <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
+            <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
+            <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
+        </div>
         <a style="text-decoration: none;color: black;" href="aboutUs.html"><div class="link">About us</div></a>
         <a style="text-decoration: none;color: black;" href="joinUs.html"><div class="link">Join us</div></a>
         <a style="text-decoration: none;color: var(--color2);" href="contact.html"><div class="link">Contact us</div></a>
+        <button onclick="dialNumber('0411156749')" class="red-button2">0411 156 749</button>
     </div>
     
     <section class="__herosection"> 
@@ -57,9 +67,31 @@
             <h1>Contact us</h1>
         </div>
     </section>
-    <br><br>
-    <div data-paperform-id="ceypjyoy"></div><script>(function() {var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js"; document.body.appendChild(script); })()</script>
-    <br><br>
+
+    <section class="cont_act">
+        <div class="contact_div">
+            <h1>Get In Touch With Us For More Information</h1>
+            <p>To explore how our dedicated team at e4 Healthcare Services can contribute to the success of your esteemed organization, please reach out to us. We’re eager to discuss the unique ways we can support your healthcare staffing needs and goals</p>
+            <div class="c_d">
+                <div onclick="sendEmail()">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Email us: <br> admin@e4healthcare.info </p>
+                </div>
+                <div onclick="dialNumber('0411156749')">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Call us: <br> 0411 156 749</p>
+                </div>
+            </div>
+        </div>
+        <div data-paperform-id="ceypjyoy" class="form"></div><script>(function() {var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js"; document.body.appendChild(script); })()</script>
+    </section>
+
+    <div class="map">
+        <h1>Visit us</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d865828.2608997272!2d115.30207665805156!3d-32.03835726977349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32966cdb47733d%3A0x304f0b535df55d0!2sPerth%20WA%2C%20Australia!5e0!3m2!1sen!2sng!4v1718944021713!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
 
     <footer>
         <div class="footerContext">

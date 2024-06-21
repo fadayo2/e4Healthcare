@@ -11,9 +11,15 @@
 </head>
 <body>
     
+    <!-- custom cursor  -->
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-trail"></div>
+
+    <!-- custom cursor -->
 
     <nav id="navbar" class="navbar">
-        <a class="logo" href="index.html"><img src="e4-logo.png" alt="" width="130"></a>
+        <a class="logo" href="index.html"><img src="e4 original logo.png" alt="" width="100"></a>
 
         <div class="navLinks">
             <a style="text-decoration: none;" href="index.html"><div class="link">Home</div></a>
@@ -40,18 +46,19 @@
 
     <div id="drpdown" class="drpDiv">
         <a style="text-decoration: none;color: black;" href="index.html"><div class="link">Home</div></a>
-        <a style="text-decoration: none;color: black;" href=""><div class="link">Services</div></a>
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-        <hr>
-        <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
-        <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
-        <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
-        <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
-        <a style="text-decoration: none;color: var(--color2);" href="serviceDisable.html"> Disability care support</a>
-        <hr>
+        <div onclick="drpdrp()" class="link">Services <i id="arrow" class="fa-solid fa-caret-down"></i></div>
+        <!-- <i class="fa fa-arrow-down" aria-hidden="true"></i> -->
+        <div id="drpdrp" class="drpdrp">
+            <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
+            <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
+            <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
+            <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
+            <a style="text-decoration: none;color: var(--color2);" href="serviceDisable.html"> Disability care support</a>
+        </div>
         <a style="text-decoration: none;color: black;" href="aboutUs.html"><div class="link">About us</div></a>
         <a style="text-decoration: none;color: black;" href="joinUs.html"><div class="link">Join us</div></a>
         <a style="text-decoration: none;color: black;" href="contact.html"><div class="link">Contact us</div></a>
+        <button onclick="dialNumber('0411156749')" class="red-button2">0411 156 749</button>
     </div>
 
     <section class="__herosection"> 
@@ -62,27 +69,34 @@
 
     <main class="main">
         <div class="maindiv">
-            <img src="disa1.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Person-centered care with clients at the center</h1>
-                <p>Disability care support services prioritize person-centered care, placing clients at the center of all decision-making processes. By considering the individual preferences, goals, and values of each client, these services aim to empower individuals with disabilities to actively participate in their care plans, foster autonomy, and promote a sense of self-determination and dignity.</p>
+            <div class="im">
+                <img src="disa1.jpg" alt="" width="">
+            </div>
+            <div class="mtt">
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Delivering person-centred care with the client at the forefront.</h1>
+                </div>
+                <hr>
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Providing services that are tailored to the individual needs of each client.</h1>
+                </div>
             </div>
         </div>
         <div class="maindiv mt">
-            <img src="disa2.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Deliver services tailored to individual needs</h1>
-                <p>Service providers in disability care support deliver personalized services tailored to meet the unique needs and requirements of each client. Through individualized care plans, assessments, and ongoing monitoring, staff work closely with clients and their families to address specific challenges, accommodate preferences, and provide the necessary support and resources to promote well-being and independence.</p>
+            <div class="im">
+                <img src="disa2.jpg" alt="" width="">
             </div>
-        </div>
-        <div class="maindiv">
-            <img src="disa3.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Support clients in daily living and enhance quality of life</h1>
-                <p>Disability care support services assist clients in daily living activities and strive to enhance their overall quality of life. This may include assistance with personal care tasks, household chores, mobility support, recreational activities, social engagement opportunities, and access to community resources, all aimed at promoting independence, social inclusion, and a meaningful life for individuals with disabilities.</p>
+            <div class="mtt">
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Supporting clients in their daily living activities to enhance their quality of life.</h1>
+                </div>
             </div>
         </div>
     </main>
+
 
     <div class="contactUs">
         <div class="contactUsDiv">

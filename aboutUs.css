@@ -4,23 +4,49 @@
     box-sizing: border-box;
 }
 
+.button {
+    padding: 10px;
+    width: 130px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: var(--color2);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: var(--color3);
+    color: white;
+    border-radius: 0px;
+}
+
+.navbar {
+    background-color: white;
+}
+
+.navLinks .link {
+    color: black;
+}
+
+.__herosection {
+    width: 100vw;
+    height: 75vh;
+    background-image: url(abtUs.jpg);
+    background-size: cover;
+}
 
 .__txt h1{
     font-weight: 350;
     font-size: calc(3vw + 3vh);
 }
 
-.__herosection {
-    width: 100vw;
-    height: 90vh;
-    background-image: url(abtUs.jpg);
-    background-size: cover;
-}
-
 .__herosection .__txt {
     width: inherit;
     height: inherit;
-    background: linear-gradient(to right , rgba(0, 0, 0, 0.808) , rgba(0, 0, 0, 0.116) , rgba(0, 0, 0, 0));
+    background: linear-gradient(to right , rgb(0, 0, 0) , rgba(0, 0, 0, 0.87) , rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0));
     display: flex;
     align-items: center;
     padding-left: 6rem;
@@ -28,89 +54,169 @@
     color: white;
 }
 
+.v-m {
+    width: 80vw;
+    height: fit-content;
+    margin: auto;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 1rem;
+    column-gap: 3rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.bandt {
+    position: absolute;
+    top: -1rem;
+    width: 150px;
+    left: -1rem;
+    z-index: 10;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.bandtt {
+    position: absolute;
+    top: -3rem;
+    width: 150px;
+    right: -3rem;
+    z-index: 10;
+}
+
+.bandv {
+    position: absolute;
+    bottom: -3rem;
+    width: 200px;
+    right: -3rem;
+    z-index: 10;
+}
+
+.bandt2 {
+    position: absolute;
+    top: -3rem;
+    width: 200px;
+    right: -3rem;
+    z-index: 10;
+}
+
+.bandb2 {
+    position: absolute;
+    bottom: -3rem;
+    width: 100px;
+    left: -3rem;
+    z-index: 10;
+}
+
+
+.v-m div {
+    position: relative;
+}
+
+.v-m div:nth-child(1) {
+    grid-row: 1 / 3;
+    border-radius: 30px;
+    background: url(vision2.jpg);
+    background-size: cover;
+    height: 500px;
+    margin-bottom: -2rem;
+}
+
+.v-m div:nth-child(2) {
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.v-m div:nth-child(4) {
+    padding: 10px;
+    height: 200px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+
+
+.v-m div:nth-child(3) {
+    grid-row: 2 / 4;
+    border-radius: 30px;
+    background: url(misson2.jpg);
+    background-size: cover;
+    height: 500px;
+}
+
+.v-m h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.v-m p {
+    font-size: 15px;
+    color: rgb(95, 95, 95);
+}
+
 .about__main {
-    width: 100vw;
-    height: 100vh;
+    margin: auto;
+    width: 80vw;
+    height: fit-content;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: -8rem;
+    /* margin-bottom: -8rem; */
 }
 
 .about__main .about__Txt {
-    width: 90vw;
+    width: inherit;
     height: 90vh;
     /* background-color: rgba(255, 255, 255, 0.842); */
     border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row-reverse;
-    /* padding-right: 2rem; */
-    /* padding-left: 2rem; */
-    /* border: 1px solid; */
+    flex-direction: row;
 }
 
 .about__Txt .about__img {
-    height: 59vh;
-    width: 45vw;
-    background-image: url(aboutUSbg\ \(2\).jpg);
+    height: 550px;
+    width: 450px;
+    /* background-image: url(aboutUSbg\ \(2\).jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     /* border: 1px solid; */
+    border-radius: 30px;
+    background: url(about_us.jpg);
+    background-size: cover;
+    position: relative;
 }
 
 .about__Txt .Txt {
-    width: 40vw;
+    width: 600px;
     height: fit-content;
     display: flex;
     align-items: start;
     justify-content: space-around;
     flex-direction: column;
     gap: 1rem;
+    /* border: 1px solid; */
+}
+
+.abt_2 {
+    margin-bottom: 1rem;
 }
 
 .abt_2 .about__Txt {
-    flex-direction: row;
-}
-
-.abt_6 {
-    margin-bottom: 5rem;
-}
-
-.abt_6 .about__img {
-    background-image: url(goals.jpg);
-}
-
-.abt_5 .about__Txt {
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 
 .abt_2 .about__img {
-    background-image: url(aim\ \(2\).jpg);
-}
-
-.abt_4 .about__img{
-    background-image: url(vision.jpg);
-}
-
-.abt_5 .about__img {
-    background-image: url(mission.jpg);
-}
-
-.abt_3 {
-    position: relative;
-}
-
-.abt_3 .about__Txt {
-    flex-direction: column;
-    width: 60vw;
-}
-
-.abt_3 .about__Txt .Txt {
-    width: inherit;
-    align-items: center;
+    background-image: url(aim-.png);
+    height: 400px;
 }
 
 .abt_3 .about__Txt ol {
@@ -133,12 +239,13 @@
 }
 
 .about__Txt .Txt h1 {
-    font-weight: 500;
-    font-size: calc(2vw + 2vh);
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .about__Txt .Txt p {
-    line-height: 2rem;
+    font-size: 15px;
+    color: rgb(95, 95, 95);
 }
 
 .value_heading {
@@ -154,76 +261,59 @@
 
 .val_ue {
     display: grid;
-    align-items: center;
-    justify-content: space-around;
-    height: fit-content;
+    grid-template-columns: repeat(2 , 1fr);
+    height: 200vh;
+    width: 60vw;
+    margin: auto;
     /* border: 1px solid; */
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    gap: 3rem;
+    /* padding-top: 3rem;
+    padding-bottom: 3rem; */
+    column-gap: 2rem;
     margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
-.val_ue .valueDiv {
-    height: fit-content;
-    width: 80vw;
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
+.val_ue div:nth-child(2) {
+    border-radius: 30px;
+    background: url(engagement.jpg);
+    background-size: cover;
 }
 
-.valueDiv .val_details {
-    width: 43vw;
-    height: fit-content;
-    transition: .5s;
-    transition-timing-function: cubic-bezier(1,0,0,1);
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0rem 0 2rem 0;
+.val_ue div:nth-child(3) {
+    border-radius: 30px;
+    background: url(enriching.jpg);
+    background-size: cover;
 }
 
-.val_details .det_txt {
-    width: inherit;
-    height: fit-content;
+.val_ue div:nth-child(6) {
+    border-radius: 30px;
+    background: url(epitome.jpg);
+    background-size: cover;
 }
 
-.det_txt p {
-    line-height: 2rem;
+.val_ue div:nth-child(7) {
+    border-radius: 30px;
+    background: url(goals.jpg);
+    background-size: cover;
+}
+
+.val_ue div {
     /* border: 1px solid; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.val_details .det_img {
-    width: 40vw;
-    height: 60vh;
-}
-
-.img1 {
-    background-image: url(Occupations.jpeg);
-    background-size: cover;
-}
-
-.img2 {
-    background-size: cover;
-    background-image: url(enriching.jpg);
-}
-
-.img3 {
-    background-size: cover;
-    background-image: url(epitome.jpg);
-}
-
-.img4 {
-    background-size: cover;
-    background-image: url(engagement.jpg);
-}
-
-.valueDiv h1 {
-    font-weight: 400;
-    font-size: calc(2vw + 2vh);
+.val_ue div h1 {
+    font-size: 24px;
+    font-weight: 600;
     color: var(--color2);
+}
+
+.val_ue div p {
+    color: rgb(95, 95, 95);
+    font-size: 15px;
 }
 
 @media (max-width: 1024px) {
@@ -248,7 +338,7 @@
         padding-bottom: 3rem;
         height: fit-content;
         border-radius: 0;
-        width: 100vw;
+        width: 90vw;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -279,6 +369,13 @@
 @media (max-width: 600px) {
     .about__main {
         padding-left: 0rem;
+        width: 80vw;
+    }
+    .about__Txt .about__img{
+        width: 80vw;
+    }
+    .about__Txt .Txt {
+        width: 80vw;
     }
     .abt_3 .band_1 {
         display: none;
@@ -297,5 +394,77 @@
     .val_details .det_img {
         width: inherit;
         height: 40vh;
+    }
+    .v-m {
+        grid-template-columns: repeat(1 , 1fr);
+        row-gap: 2rem;
+        width: 90vw;
+    }
+    .v-m div:nth-child(3) {
+        grid-row: initial;
+        border-radius: 30px;
+        background: url(misson2.jpg);
+        background-size: cover;
+        height: 300px;
+        margin-bottom: -2rem;
+    }
+    .v-m div:nth-child(1) {
+        grid-row: initial;
+        border-radius: 30px;
+        background: url(vision2.jpg);
+        background-size: cover;
+        height: 300px;
+        margin-bottom: -2rem;
+    }
+    .v-m div:nth-child(2) {
+        height: fit-content;
+    }
+    
+    .v-m div:nth-child(4) {
+        height: fit-content;
+    }
+    .about__Txt .about__img {
+        height: 400px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 1rem;
+    }
+    .bandt {
+        position: absolute;
+        top: -1rem;
+        width: 100px;
+        left: -1rem;
+        z-index: 10;
+        background-color: white;
+        border-radius: 50%;
+    }
+    
+    .bandtt {
+        position: absolute;
+        top: -3rem;
+        width: 100px;
+        right: 0rem;
+        z-index: 10;
+    }
+    .val_ue {
+        grid-template-columns: repeat(1 , 1fr);
+        height: fit-content;
+        row-gap: 2rem;
+    }
+    .val_ue div:nth-child(2) {
+        display: none;
+    }
+    
+    .val_ue div:nth-child(3) {
+        display: none;
+    }
+    
+    .val_ue div:nth-child(6) {
+        display: none;
+    }
+    
+    .val_ue div:nth-child(7) {
+        display: none;
     }
 }

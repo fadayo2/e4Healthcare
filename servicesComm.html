@@ -9,10 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+    <!-- custom cursor  -->
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-trail"></div>
+
+    <!-- custom cursor -->
     
 
     <nav id="navbar" class="navbar">
-        <a class="logo" href="index.html"><img src="e4-logo.png" alt="" width="130"></a>
+        <a class="logo" href="index.html"><img src="e4 original logo.png" alt="" width="100"></a>
 
         <div class="navLinks">
             <a style="text-decoration: none;" href="index.html"><div class="link">Home</div></a>
@@ -39,18 +46,19 @@
 
     <div id="drpdown" class="drpDiv">
         <a style="text-decoration: none;color: black;" href="index.html"><div class="link">Home</div></a>
-        <a style="text-decoration: none;color: black;" href=""><div class="link">Services</div></a>
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-        <hr>
-        <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
-        <a style="text-decoration: none;color: var(--color2);" href="servicesComm.html">Community care/Respite support</a>
-        <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
-        <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
-        <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
-        <hr>
+        <div onclick="drpdrp()" class="link">Services <i id="arrow" class="fa-solid fa-caret-down"></i></div>
+        <!-- <i class="fa fa-arrow-down" aria-hidden="true"></i> -->
+        <div id="drpdrp" class="drpdrp">
+            <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
+            <a style="text-decoration: none;color: var(--color2);" href="servicesComm.html">Community care/Respite support</a>
+            <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
+            <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
+            <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
+        </div>
         <a style="text-decoration: none;color: black;" href="aboutUs.html"><div class="link">About us</div></a>
         <a style="text-decoration: none;color: black;" href="joinUs.html"><div class="link">Join us</div></a>
         <a style="text-decoration: none;color: black;" href="contact.html"><div class="link">Contact us</div></a>
+        <button onclick="dialNumber('0411156749')" class="red-button2">0411 156 749</button>
     </div>
 
     <section class="__herosection"> 
@@ -61,28 +69,34 @@
 
     <main class="main">
         <div class="maindiv">
-            <img src="COMMUNITYCJJ.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Experienced staff assist clients in enjoying recreational activities</h1>
-                <p>Experienced staff in community care/respite support services engage clients in recreational activities to enhance their well-being and enjoyment. These activities may include hobbies, sports, arts and crafts, gardening, and participation in community programs, providing clients with opportunities for social interaction, stimulation, and personal fulfillment.</p>
+            <div class="im">
+                <img src="comm1.jpg" alt="" width="">
+            </div>
+            <div class="mtt">
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Assisting clients in engaging with enjoyable recreational activities.</h1>
+                </div>
+                <hr>
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Building and fostering connections with the community and loved ones.</h1>
+                </div>
             </div>
         </div>
         <div class="maindiv mt">
-            <img src="comm1.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Foster connections to the community and loved ones.</h1>
-                <p>Community care/respite support services help foster connections to the community and loved ones for clients. By organizing outings, social gatherings, and events, staff facilitate meaningful interactions and networking opportunities that promote a sense of belonging, reduce isolation, and strengthen the client's social support network.</p>
+            <div class="im">
+                <img src="comm2.jpg" alt="" width="">
             </div>
-        </div>
-        <div class="maindiv">
-            <img src="comm2.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Ensure clients feel supported, safe, and cared for during activities and community programs.</h1>
-                <p>The primary focus of community care/respite support services is to ensure that clients feel supported, safe, and cared for during their time of respite. Staff provide personalized attention, compassionate care, and emotional support to enhance the client's well-being and comfort, creating a nurturing and secure environment for them to relax and recharge.</p>
+            <div class="mtt">
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Creating a supportive, safe, and caring environment for clients, with activities that include hobbies, recreation, sports, arts, gardening, and community programs.</h1>
+                </div>
             </div>
         </div>
     </main>
-
+    
     <div class="contactUs">
         <div class="contactUsDiv">
             <h1>We Care with Love and Respect</h1>

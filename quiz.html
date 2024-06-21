@@ -4,15 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>e4Healthcare Services Pty Ltd</title>
-    <link rel="stylesheet" href="quiz.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz.css">
     <link rel="shortcut icon" href="favicon (3).ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <div data-paperform-id="e4healthcare"></div><script>(function() {var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js"; document.body.appendChild(script); })()</script>
+    <nav id="navbar" class="navbar">
+        <a class="logo" href="index.html"><img src="e4 original logo.png" alt="" width="100"></a>
 
-    <script src="quiz.js"></script>
+        <div class="navLinks">
+            <a style="text-decoration: none;" href="index.html"><div class="link">Home</div></a>
+            <div onclick="serv()" class="link dropdown">Services
+                    <div class="dropdown-content">
+                        <a href="servicesAged.html">Aged care residential facility and hospitals</a>
+                        <a href="servicesComm.html">Community care/Respite support</a>
+                        <a href="servicesHome.html">Home care support</a>
+                        <a href="servicesMental.html"> Mental health support programs</a>
+                        <a href="serviceDisable.html"> Disability care support</a>
+                    </div>
+            </div>
+            <a style="text-decoration: none;" href="aboutUs.html"><div class="link">About Us</div></a>
+            <a style="text-decoration: none;" href="joinUs.html"><div class="link">Join Us</div></a>
+            <a style="text-decoration: none;" href="contact.html"><div class="link">Contact Us</div></a>
+        </div>
+
+        <button onclick="dialNumber('0411156749')" class="red-button">0411 156 749</button>
+        
+        <i onclick="drpD()" class="fa-solid fa-bars" id="menu"></i>
+        <i onclick="drpU()" class="fa-solid fa-xmark" id="cancel"></i>
+
+    </nav>
+
+    <div id="drpdown" class="drpDiv">
+        <a style="text-decoration: none;color: black;" href="index.html"><div class="link">Home</div></a>
+        <div onclick="drpdrp()" class="link">Services <i id="arrow" class="fa-solid fa-caret-down"></i></div>
+        <!-- <i class="fa fa-arrow-down" aria-hidden="true"></i> -->
+        <div id="drpdrp" class="drpdrp">
+            <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
+            <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
+            <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
+            <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
+            <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
+        </div>
+        <a style="text-decoration: none;color: black;" href="aboutUs.html"><div class="link">About us</div></a>
+        <a style="text-decoration: none;color: black;" href="joinUs.html"><div class="link">Join us</div></a>
+        <a style="text-decoration: none;color: black;" href="contact.html"><div class="link">Contact us</div></a>
+        <button onclick="dialNumber('0411156749')" class="red-button2">0411 156 749</button>
+    </div>
+
+    <div data-paperform-id="e4healthcare" class="form"></div><script>(function() {var script = document.createElement('script'); script.src = "https://paperform.co/__embed.min.js"; document.body.appendChild(script); })()</script>
+
+    <script src="main.js"></script>
 </body>
 </html>

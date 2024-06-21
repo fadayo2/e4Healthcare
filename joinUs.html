@@ -12,8 +12,15 @@
 </head>
 <body>
 
+    <!-- custom cursor  -->
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-trail"></div>
+
+    <!-- custom cursor -->
+
     <nav id="navbar" class="navbar">
-        <a class="logo" href="index.html"><img src="e4-logo.png" alt="" width="130"></a>
+        <a class="logo" href="index.html"><img src="e4 original logo.png" alt="" width="100"></a>
 
         <div class="navLinks">
             <a style="text-decoration: none;" href="index.html"><div class="link">Home</div></a>
@@ -40,18 +47,19 @@
 
     <div id="drpdown" class="drpDiv">
         <a style="text-decoration: none;color: black;" href="index.html"><div class="link">Home</div></a>
-        <a style="text-decoration: none;color: black;" href=""><div class="link">Services</div></a>
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-        <hr>
-        <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
-        <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
-        <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
-        <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
-        <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
-        <hr>
+        <div onclick="drpdrp()" class="link">Services <i id="arrow" class="fa-solid fa-caret-down"></i></div>
+        <!-- <i class="fa fa-arrow-down" aria-hidden="true"></i> -->
+        <div id="drpdrp" class="drpdrp">
+            <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
+            <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
+            <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
+            <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
+            <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
+        </div>
         <a style="text-decoration: none;color: black;" href="aboutUs.html"><div class="link">About us</div></a>
         <a style="text-decoration: none;color: var(--color2);" href="joinUs.html"><div class="link">Join us</div></a>
         <a style="text-decoration: none;color: black;" href="contact.html"><div class="link">Contact us</div></a>
+        <button onclick="dialNumber('0411156749')" class="red-button2">0411 156 749</button>
     </div>
 
     <section class="__herosection"> 
@@ -60,29 +68,59 @@
         </div>
     </section>
 
-    <main class="joinMain">
-        <div>
-            <p>E4 Healthcare is a healthcare services are established and run by nurses. Our competitive advantage is the high level of care we give to our clients and their families, as well as our dedication to our team</p>
-            <!-- <ul class="ul1">
-                <li>a.	Build a strong community of nurses and nursing assistants who are the backbone of our healthcare Industry. </li>
-                <li>b.	Establish nurses with years of experiences with NDIS clearance and registrations </li>
-                <li>c.	We thrive in the early morning shift; however, we have experienced staff to cover all hours of roster on ad hoc basis.</li>
-            </ul> -->
-            <p>If you wish to make a great difference, to leave a positive legacy for your community, then E4 Healthcare Services is definitely the right place for you. Our experienced staff must meet the following requirements : </p>
-            <ul>
-                <li>24 months of relevant industry experience.</li>
-                <li>National police clearance under 6 months old </li>
-                <li>Qualifications: Certificate III Nurse Assistant or AHPRA registration</li>
-                <li>Excellent verbal and written communication skills</li>
-                <li>Good understanding of quality and safety outcomes for healthcare providers</li>
-                <li>Working with children and NDIS worker checks.</li>
-                <li>Flexibility and adaptability</li>
-                <li>Proof of immunisations and vaccination</li>
-                <li>Update of COVID-19 Vaccinations</li>
-            </ul>
-            <button onclick="redirect()">Apply Now</button>
+        <div class="abt_3" id="aTxt">
+            <div class="Txt">
+                <h1>Staff benefit</h1>  
+                <p>e4 dependable services we will go and beyond to ensure that we fill out any shift with experience and skilled staff. 
+                    We focus on building authentic business relationship with clients by assisting them with their health goals and expectation.
+                    With e4 open and clear communication our clients are involved with every aspect of their health and wellbeing
+                    Transparency with payment and choices to choose weekly, fortnightly or monthly payment.
+                    Our commitment to our staff is reflected in:
+                </p>
+
+                <ol>
+                    <li>Generous wages.</li>
+                    <li>Staff appreciation and rewards. </li>
+                    <li>Incentives if you refer your experienced colleagues</li>
+                    <li>Staff acknowledgement and rewards</li>
+                </ol>
+                <button onclick="redirect()">Apply Now</button>
+            </div>
+            <div class="img"></div>
         </div>
-    </main>
+
+        <div class="abt_3 abt_4" id="aTxt">
+            <div class="Txt">
+                <h1>Join Our Team</h1>  
+                <p>e4 Healthcare is not just a healthcare service; it’s a community-led by nurses who are deeply committed to providing exceptional care to clients and their families. Our strength lies in our team’s dedication and the high-quality care we deliver.
+                    We’re looking for individuals who:                    
+                </p>
+
+                <ol>
+                    <li>Provides care with love and respect, prioritizing people’s health and well-being.</li>
+                    <li>Understands the importance of quality and safety outcomes for healthcare providers.</li>
+                    <li>Possesses the necessary checks for working with children and NDIS Clearance.</li>
+                    <li>Shows flexibility and adaptability.</li>
+                    <li>Has up-to-date immunizations and COVID-19 vaccinations.</li>
+                    <li>Have years of experience and hold NDIS clearance.</li>
+                    <li>Excel in early morning shifts, with the flexibility to cover all hours on an ad hoc basis.</li>
+                    <li>Have years of experience and hold NDIS clearance.</li>
+                    <li>Meet our requirements for experienced staff:</li>
+                </ol>
+                <p style="color: black; font-weight: bolder;margin-top: 1rem;">Meet our requirements for experienced staff:</p>
+                <ol>
+                    <li>24 months of relevant industry experience.</li>
+                    <li>National police clearance under 6 months old.</li>
+                    <li>Qualifications: Certificate III Nurse Assistant or AHPRA registration.</li>
+                    <li>Excellent verbal and written communication skills.</li>
+                </ol>
+                <button onclick="redirect()">Apply Now</button>
+            </div>
+            <div class="imgOv">
+                <div class="img"></div>
+                <div class="img"></div>
+            </div>
+        </div>
 
     <div class="contactUs">
         <div class="contactUsDiv">

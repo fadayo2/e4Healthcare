@@ -4,10 +4,11 @@
 :root { 
     --color2 : #20b9eb;
     --color1 : rgb(255, 255, 255);
-    --color3 : black;
+    --color3 : #6ab016;
     --fontFamily : "Poppins", sans-serif;
     --boldFont : 600;
     --lightFont : 400;
+    --banner: linear-gradient(135deg, #064c97, #228cfc);
 }
 
 ::-webkit-scrollbar {
@@ -112,13 +113,16 @@ body {
     font-weight: var(--boldFont);
     width: fit-content;
     margin-top: .5rem;
-    column-gap: 7vw;
+    margin-left: 18rem;
+    column-gap: 5vw;
 }
 
 .navLinks .link {
     font-size: calc(.9vw + .9vh);
     color: white;
     width: fit-content;
+    font-weight: 500;
+    font-size: 17px;
 }
 
 .navLinks a {
@@ -132,8 +136,8 @@ body {
 }
 
 .red-button {
-    background-color: gold;
-    color: black;
+    background-color: var(--color3);
+    color: white;
     height: 40px;
     width: 130px;
     padding: 0px 0px;
@@ -157,16 +161,17 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    left: -10rem;
+    left: -7rem;
     top: 4rem;
     background-color: white;
-    width: 500px;
+    width: 300px;
     height: 300px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.164);
     z-index: 999;
     align-items: center;
     justify-content: space-around;
     padding-bottom: 2rem;
+    padding-left: 1rem;
 }
 
 .dropdown-content a {
@@ -174,6 +179,12 @@ body {
     text-decoration: none;
     transition: 0.2s;
     margin-top: 0px;
+    font-size: 16px;
+    /* text-align: center; */
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
 }
 
 
@@ -205,13 +216,14 @@ body {
 }
 
 .vid{
-    object-fit: cover; 
-    width: 100vw;
-    height: 100vh;  
     position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -10;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
 .container{
@@ -245,9 +257,7 @@ body {
     font-size: 1.5vw; 
     font-weight: light;
     color: white;
-    line-height: 1.6; 
     font-smooth: always;
-    line-height: 2rem;
 }
 
 .container div button {
@@ -272,40 +282,10 @@ body {
 }
 
 .container div button:hover {
-    background-color: #ffcc00; 
+    background-color: var(--color3); 
     scale: 1.05;
-    color: black;
+    color: var(--color1);
     border-radius: 0px;
-}
-
-#splide1 {
-    height: inherit;
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
-    background-image: url(e4bg1.jpg);
-    width: 100vw;
-    background-size: cover;
-}
-
-#splide2 {
-    height: inherit;
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
-    background-image: url(e4bg2.jpg);
-    width: 100vw;
-    background-size: cover;
-}
-
-#splide3 {
-    height: inherit;
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
-    background-image: url(e4bg3.jpg);
-    width: 100vw;
-    background-size: cover;
 }
 
 .herotxt {
@@ -456,34 +436,32 @@ body {
     transform: translateY(-5px);
 }
 
-header {
+.h_1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 2rem;
     z-index: 15;
 }
 
-header h1 {
-    font-size: calc(2vw + 2vh);
-    font-weight: 500;
+.h_1 h1 {
+    font-size: calc(1.9vw + 1.9vh);
+    font-weight: 400;
+    text-align: center;
 }
 
-header .h11 {
-    color: #14a0f7;
-    background: linear-gradient(to right, #14a0f7, #0d6ef0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+.h_1 .h11 {
+    color: #14A0F7;
+    font-weight: 500;
+    font-size: calc(1.7vw + 1.7vh);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
 .services__we__provide {
     width: 100vw;
-    height: auto;
+    height: fit-content;
     display: grid;
     gap: 2rem;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     align-items: center;
     justify-content: center;
 }
@@ -492,13 +470,13 @@ header .h11 {
     width: 95vw;
     /* border: inherit; */
     height: fit-content;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    /* grid-template-columns: auto auto auto auto auto; */
+    /* flex-wrap: wrap; */
+    grid-template-columns: auto auto auto auto auto;
     margin-bottom: 3rem;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     row-gap: 3rem;
 }
 
@@ -560,13 +538,15 @@ header .h11 {
 
 .aboutUs .aboutUsDiv {
     border-radius: 10px;
-    width: 95vw;
+    width: 90vw;
     height: fit-content;
     display: flex;
     align-items: start;
     justify-content: space-between;
     background-color: rgb(255, 255, 255);
     box-shadow: 1px 0px 10px 1px rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .aboutUsDiv .abtTxt {
@@ -578,12 +558,12 @@ header .h11 {
 .abtTxt h1 {
     font-size: 40px;
     font-weight: 400;
-    margin-bottom: rem;
+    margin-bottom: .5rem;
 }
 
 .abtTxt p { 
-    line-height: 1.8rem;
-    font-size: 14px;
+    font-size: 17px;
+    color: rgb(51, 51, 51);
 }
 
 .abtCta {
@@ -603,14 +583,14 @@ header .h11 {
 }
 
 .abtCta:hover {
-    background-color: #ffcc00;
+    background-color: var(--color3);
     border-radius: 0px;
-    color: black;
+    color: white;
 }
 
 .aboutUsDiv .abtImg {
-    height: 90vh;
-    width: 60vw;
+    height: 547.4px;
+    width: 729.8px;
     background-image: url(abtme.jpg);
     background-size: cover;
     display: block;
@@ -621,7 +601,7 @@ header .h11 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #FFcc00, #FFB14E); 
+    background: var(--banner); 
     width: 100vw;
 }
 
@@ -638,23 +618,22 @@ header .h11 {
     text-transform: capitalize;
     font-size: calc(2.2vw + 2.2vh);
     font-weight: 500;
-    color: black;
+    color: var(--color1);
 }
 
 .contactUsDiv p {
     font-size: 20px;
     text-transform: capitalize;
     font-size: calc(1.2vw + 1.2vh);
-    color: black;
+    color: var(--color1);
 }
 
 .contactUsDiv button {
     padding: 15px;
     border: none;
     background-color: white;
-    border: 2px solid #FF8C00; 
     border-radius: 25px;
-    color: #FF8C00; 
+    color: rgb(21, 21, 252); 
     font-size: 16px;
     margin-top: 30px;
     padding: 15px 30px;
@@ -664,45 +643,12 @@ header .h11 {
 }
 
 .contactUsDiv button:hover {
-    background-color: #FF8C00;
+    background-color: var(--color3);
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
     transform: scale(1.05); 
 }
 
-.splide {
-    width: 100vw;
-}
-
-#splide__track {
-    height: 80vh;
-    /* background-color: teal; */
-}
-
-#splide__track .splide__slide {
-    /* background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid black; */
-    width: 400px;
-}
-
-/* #splide__list {
-    width: 100vw;
-} */
-
-.splide__slide div {
-    width: 350px;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.253);
-}
 
 footer {
     height: fit-content;
@@ -788,6 +734,7 @@ footer .footerContext {
 }
 
 
+
 @media (max-width: 1024px) {
     .custom-cursor {
         display: none;
@@ -815,7 +762,10 @@ footer .footerContext {
     }
     .services__we__provide .service__div {
         height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
         /* gap: 3rem; */
+        width: 100vw;
     }
     .aboutUs .aboutUsDiv {
         width: 100vw;
@@ -830,9 +780,6 @@ footer .footerContext {
     .aboutUsDiv .abtTxt {
         width: inherit;
         height: fit-content;   
-    }
-    .abtTxt p {
-        line-height: 2rem;
     }
     .aboutUsDiv .abtImg {
         width: 50vw;
@@ -871,21 +818,58 @@ footer .footerContext {
     }
     .drpDiv {
         display: block;
-        width: 100vw;
+        width: 0vw;
         background-color: white;
         color: black;
         font-weight: var(--boldFont);
         position: fixed;
         top: 5rem;
+        right: 0;
         display: grid;
         align-items: center;
         justify-content: space-around;
         text-align: center;
-        height: 0px;
+        height: fit-content;
         transition: .5s;
         transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
         overflow: hidden;
         z-index: 888;
+        gap: 1rem;
+    }
+    .red-button {
+        display: none;
+    }
+    .red-button2 {
+        background-color: var(--color3);
+        color: white;
+        height: 40px;
+        width: 130px;
+        padding: 0px 0px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: 0.5s;
+        font-weight: 600;
+        font-family: 'Trebuchet MS';
+        font-smooth: always;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-family: "Poppins", sans-serif;
+        z-index: 20;
+    }
+    .drpdrp {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+        display: grid;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+        transition: .5s;
+        height: 0;
+        overflow: hidden;
     }
 }
 
@@ -914,21 +898,23 @@ footer .footerContext {
     }
     .drpDiv {
         display: block;
-        width: 100vw;
+        width: 0vw;
         background-color: white;
         color: black;
         font-weight: var(--boldFont);
         position: fixed;
         top: 5rem;
+        right: 0;
         display: grid;
         align-items: center;
         justify-content: space-around;
         text-align: center;
-        height: 0px;
+        height: fit-content;
         transition: .5s;
         transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
         overflow: hidden;
         z-index: 888;
+        gap: 1rem;
     }
     .herosection section {
         height: 0px;
@@ -944,9 +930,10 @@ footer .footerContext {
     main {
         padding-left: 2.3rem;
     }
-    main .servicesDiv{
-        width: 80vw;
+    .m2 .servicesDiv{
+        width: 90vw;
     }
+
     .servicesDiv .servicesTxt {
         width: 70vw;
     }   
@@ -1036,5 +1023,8 @@ footer .footerContext {
     }
     .contact .links {
         width: 70vw;
+    }
+    br {
+        display: none;
     }
 }

@@ -12,9 +12,15 @@
 </head>
 <body>
     
+    <!-- custom cursor  -->
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-trail"></div>
+
+    <!-- custom cursor -->
 
     <nav id="navbar" class="navbar">
-        <a class="logo" href="index.html"><img src="e4-logo.png" alt="" width="130"></a>
+        <a class="logo" href="index.html"><img src="e4 original logo.png" alt="" width="100"></a>
 
         <div class="navLinks">
             <a style="text-decoration: none;" href="index.html"><div class="link">Home</div></a>
@@ -41,18 +47,19 @@
 
     <div id="drpdown" class="drpDiv">
         <a style="text-decoration: none;color: black;" href="index.html"><div class="link">Home</div></a>
-        <a style="text-decoration: none;color: black;" href=""><div class="link">Services</div></a>
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-        <hr>
-        <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
-        <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
-        <a style="text-decoration: none;color: var(--color2);" href="servicesHome.html">Home care support</a>
-        <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
-        <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
-        <hr>
+        <div onclick="drpdrp()" class="link">Services <i id="arrow" class="fa-solid fa-caret-down"></i></div>
+        <!-- <i class="fa fa-arrow-down" aria-hidden="true"></i> -->
+        <div id="drpdrp" class="drpdrp">
+            <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
+            <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
+            <a style="text-decoration: none;color: var(--color2);" href="servicesHome.html">Home care support</a>
+            <a style="text-decoration: none;color: black;" href="servicesMental.html"> Mental health support programs</a>
+            <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
+        </div>
         <a style="text-decoration: none;color: black;" href="aboutUs.html"><div class="link">About us</div></a>
         <a style="text-decoration: none;color: black;" href="joinUs.html"><div class="link">Join us</div></a>
         <a style="text-decoration: none;color: black;" href="contact.html"><div class="link">Contact us</div></a>
+        <button onclick="dialNumber('0411156749')" class="red-button2">0411 156 749</button>
     </div>
 
     <section class="__herosection"> 
@@ -63,31 +70,35 @@
 
     <main class="main">
         <div class="maindiv">
-            <img src="home1.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Friendly and highly experienced staff promote independence</h1>
-                <p>In home care support, friendly and highly experienced staff work to promote independence among clients. By providing encouragement, guidance, and a helping hand, they empower individuals to maintain their autonomy and make their own choices, fostering a sense of self-reliance and empowerment.</p>
+            <div class="im">
+                <img src="home1.jpg" alt="" width="">
+            </div>
+            <div class="mtt">
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Promoting independence through friendly and highly experienced staff.</h1>
+                </div>
+                <hr>
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Providing personalized care and services to meet the unique needs and goals of each client.</h1>
+                </div>
             </div>
         </div>
         <div class="maindiv mt">
-            <img src="home4.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Personalized care and services to meet individual needs and goals</h1>
-                <p>Personalized care and services are tailored to meet the individual needs and goals of each client in home care support. Staff work closely with clients and their families to create customized care plans that address specific requirements, preferences, and aspirations, ensuring that the support provided is tailored to enhance the client's overall well-being and quality of life.</p>
+            <div class="im">
+                <img src="home3.jpg" alt="" width="">
             </div>
-        </div>
-        <div class="maindiv">
-            <img src="home2.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Keep clients safe, independent, and connected to their community</h1>
-                <p>Home care support services aim to keep clients safe, independent, and connected to their community. Through safety assessments, mobility assistance, social engagement activities, and community involvement opportunities, staff create a supportive environment that promotes security, autonomy, and social connections, enabling clients to remain active, engaged, and connected within their local community.</p>
-            </div>
-        </div>
-        <div class="maindiv mt">
-            <img src="home3.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Improve health and well-being.</h1>
-                <p>The primary goal of home care support services is to improve the health and well-being of clients. By offering personalized care, health monitoring, medication management, nutrition support, and access to healthcare resources, staff work to enhance the physical, mental, and emotional health of clients, promoting overall wellness and quality of life.</p>
+            <div class="mtt">
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Ensuring clients remain safe, independent, and connected within their communities.</h1>
+                </div>
+                <hr>
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Focusing on improving overall health and well-being.</h1>
+                </div>
             </div>
         </div>
     </main>

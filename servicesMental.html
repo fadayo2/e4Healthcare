@@ -11,9 +11,15 @@
 </head>
 <body>
     
+    <!-- custom cursor  -->
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-trail"></div>
+
+    <!-- custom cursor -->
 
     <nav id="navbar" class="navbar">
-        <a class="logo" href="index.html"><img src="e4-logo.png" alt="" width="130"></a>
+        <a class="logo" href="index.html"><img src="e4 original logo.png" alt="" width="100"></a>
 
         <div class="navLinks">
             <a style="text-decoration: none;" href="index.html"><div class="link">Home</div></a>
@@ -40,18 +46,19 @@
 
     <div id="drpdown" class="drpDiv">
         <a style="text-decoration: none;color: black;" href="index.html"><div class="link">Home</div></a>
-        <a style="text-decoration: none;color: black;" href=""><div class="link">Services</div></a>
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-        <hr>
-        <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
-        <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
-        <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
-        <a style="text-decoration: none;color: var(--color2);" href="servicesMental.html"> Mental health support programs</a>
-        <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
-        <hr>
+        <div onclick="drpdrp()" class="link">Services <i id="arrow" class="fa-solid fa-caret-down"></i></div>
+        <!-- <i class="fa fa-arrow-down" aria-hidden="true"></i> -->
+        <div id="drpdrp" class="drpdrp">
+            <a style="text-decoration: none;color: black;" href="servicesAged.html">Aged care residential facility <br> and hospitals</a>
+            <a style="text-decoration: none;color: black;" href="servicesComm.html">Community care/Respite support</a>
+            <a style="text-decoration: none;color: black;" href="servicesHome.html">Home care support</a>
+            <a style="text-decoration: none;color: var(--color2);" href="servicesMental.html"> Mental health support programs</a>
+            <a style="text-decoration: none;color: black;" href="serviceDisable.html"> Disability care support</a>
+        </div>
         <a style="text-decoration: none;color: black;" href="aboutUs.html"><div class="link">About us</div></a>
         <a style="text-decoration: none;color: black;" href="joinUs.html"><div class="link">Join us</div></a>
         <a style="text-decoration: none;color: black;" href="contact.html"><div class="link">Contact us</div></a>
+        <button onclick="dialNumber('0411156749')" class="red-button2">0411 156 749</button>
     </div>
 
     <section class="__herosection"> 
@@ -62,31 +69,35 @@
 
     <main class="main">
         <div class="maindiv">
-            <img src="ment1.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Focus on recovery from mental health challenges</h1>
-                <p>Mental health support programs prioritize focusing on the recovery of individuals facing mental health challenges. These programs provide resources, therapies, and interventions designed to help clients manage symptoms, cope with difficulties, and work towards restoring their mental well-being and quality of life.</p>
+            <div class="im">
+                <img src="ment1.jpg" alt="" width="">
+            </div>
+            <div class="mtt">
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Concentrating on the recovery from mental health challenges.</h1>
+                </div>
+                <hr>
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Implementing appropriate care strategies for full recovery and ongoing management.</h1>
+                </div>
             </div>
         </div>
         <div class="maindiv mt">
-            <img src="ment2.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Implement appropriate care for full recovery and ongoing management</h1>
-                <p>The programs implement appropriate care strategies for facilitating full recovery and ongoing mental health management. This may involve a combination of therapy, medication, support groups, education, and skill-building techniques aimed at equipping clients with the tools and resources necessary to manage their mental health conditions effectively and promote long-term wellness.</p>
+            <div class="im">
+                <img src="ment4.jpg" alt="" width="">
             </div>
-        </div>
-        <div class="maindiv">
-            <img src="ment3.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Prioritize peace, love, and sound mental health</h1>
-                <p>Peace, love, and sound mental health are prioritized in mental health support programs, emphasizing the importance of creating a nurturing and supportive environment that fosters emotional well-being, self-acceptance, and positive mental health outcomes for clients. These programs strive to promote inner peace, emotional stability, and a sense of belonging and connection within the community.</p>
-            </div>
-        </div>
-        <div class="maindiv mt">
-            <img src="ment4.jpg" alt="" width="">
-            <div class="mainTxt">
-                <h1>Diverse team backgrounds contribute to holistic care</h1>
-                <p>Mental health support programs benefit from the diverse backgrounds of their team members, which contribute to a holistic approach to care. By bringing together professionals with varied expertise, cultural perspectives, and personal experiences, these programs can offer comprehensive, individualized support that addresses the unique needs, preferences, and strengths of each client, promoting holistic healing and well-rounded care.</p>
+            <div class="mtt">
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Emphasizing the importance of peace, love, and sound mental health.</h1>
+                </div>
+                <hr>
+                <div class="mainTxt">
+                    <span>➤</span>
+                    <h1>Leveraging the diverse backgrounds of our team to contribute to holistic care.</h1>
+                </div>
             </div>
         </div>
     </main>
