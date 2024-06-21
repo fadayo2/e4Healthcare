@@ -897,6 +897,7 @@ footer .footerContext {
         display: none !important;
     }
     .drpDiv {
+        position: relative;
         display: block;
         width: 0vw;
         background-color: white;
@@ -904,7 +905,7 @@ footer .footerContext {
         font-weight: var(--boldFont);
         position: fixed;
         top: 5rem;
-        right: 0;
+        left: 0;
         display: grid;
         align-items: center;
         justify-content: space-around;
