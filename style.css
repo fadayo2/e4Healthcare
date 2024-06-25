@@ -226,6 +226,18 @@ body {
     z-index: -1;
 }
 
+.mvid{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    display: none;
+}
+
 .container{
     width: 100vw;
     height: 100vh;  
@@ -724,6 +736,31 @@ footer .footerContext {
     text-decoration: underline;
 }
 
+.footerContext .links {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footerContext .links a {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+
+    & i {
+        color: black !important;
+    }
+}
+
+.footerContext .links a:hover {
+    scale: 1.3;
+}
+
 .lstDiv {
     height: 10vh;
     display: flex;
@@ -824,7 +861,7 @@ footer .footerContext {
         font-weight: var(--boldFont);
         position: fixed;
         top: 5rem;
-        right: 0;
+        left: 0;
         display: grid;
         align-items: center;
         justify-content: space-around;
@@ -860,6 +897,7 @@ footer .footerContext {
         -moz-osx-font-smoothing: grayscale;
         font-family: "Poppins", sans-serif;
         z-index: 20;
+        margin: auto;
     }
     .drpdrp {
         border-bottom: 1px solid rgba(0, 0, 0, 0.267);
@@ -870,6 +908,12 @@ footer .footerContext {
         transition: .5s;
         height: 0;
         overflow: hidden;
+    }
+    .vid {
+        display: none;
+    }
+    .mvid {
+        display: block;
     }
 }
 
@@ -990,7 +1034,9 @@ footer .footerContext {
     }
 
     .aboutUsDiv .abtImg {
-        display: none;
+        /* display: none; */
+        margin-top: 2rem;
+        width: 80vw;
     }
     .contactUs {
         margin-top: 0rem;
@@ -1007,25 +1053,41 @@ footer .footerContext {
         grid-template-columns: auto;
     }
     .footerContext .services {
-        width: 100vw;
+        width: 90vw;
         display: flex;
         align-items: start;
         justify-content: space-around;
         flex-direction: column;
-        padding-left: 3rem;
+        padding-left: 1rem;
     }
     .footerContext .contact {
-        width: 100vw;
+        width: 90vw;
         display: flex;
         align-items: start;
         justify-content: space-around;
         flex-direction: column;
-        padding-left: 3rem;
+        padding-left: 1rem;
+    }
+    .footerContext .services hr {
+        width: 80%;
+    }
+    .footerContext .contact hr {
+        width: 80%;
     }
     .contact .links {
         width: 70vw;
     }
-    br {
+    .vid {
         display: none;
+    }
+    .mvid {
+        display: block;
+    }
+    .mvid{
+        /* position: absolute; */
+        width: 100%;
+        height: 100%;
+        /* object-fit: contain; */
+        z-index: -1;
     }
 }

@@ -46,7 +46,7 @@
 .__herosection .__txt {
     width: inherit;
     height: inherit;
-    background: linear-gradient(to right , rgb(0, 0, 0) , rgba(0, 0, 0, 0.87) , rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0));
+    background: linear-gradient(to right , rgba(0, 0, 0, 0.767) , rgba(0, 0, 0, 0.356) , rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0));
     display: flex;
     align-items: center;
     padding-left: 6rem;
@@ -65,13 +65,14 @@
     column-gap: 3rem;
     padding: 1rem;
     position: relative;
+    /* border: 1px solid black; */
 }
 
 .bandt {
     position: absolute;
     top: -1rem;
     width: 150px;
-    left: -1rem;
+    right: -1rem;
     z-index: 10;
     background-color: white;
     border-radius: 50%;
@@ -112,15 +113,15 @@
 
 .v-m div {
     position: relative;
+    /* border: 1px solid; */
 }
 
-.v-m div:nth-child(1) {
-    grid-row: 1 / 3;
+.v-m div:nth-child(3) {
+    grid-column: 1 / 3;
     border-radius: 30px;
-    background: url(vision2.jpg);
+    background: url(abtme.jpg);
     background-size: cover;
     height: 500px;
-    margin-bottom: -2rem;
 }
 
 .v-m div:nth-child(2) {
@@ -132,7 +133,7 @@
     flex-direction: column;
 }
 
-.v-m div:nth-child(4) {
+.v-m div:nth-child(1) {
     padding: 10px;
     height: 200px;
     display: flex;
@@ -142,13 +143,6 @@
 }
 
 
-.v-m div:nth-child(3) {
-    grid-row: 2 / 4;
-    border-radius: 30px;
-    background: url(misson2.jpg);
-    background-size: cover;
-    height: 500px;
-}
 
 .v-m h2 {
     font-size: 24px;
@@ -185,13 +179,11 @@
 .about__Txt .about__img {
     height: 550px;
     width: 450px;
-    /* background-image: url(aboutUSbg\ \(2\).jpg); */
+    border-radius: 30px;
+    background: url(abt-dct.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    /* border: 1px solid; */
-    border-radius: 30px;
-    background: url(about_us.jpg);
-    background-size: cover;
+    background-position: center;
     position: relative;
 }
 
@@ -257,6 +249,7 @@
 .value_heading h1 {
     font-weight: 400;
     font-size: calc(3.8vw + 3.8vh);
+    text-align: center;
 }
 
 .val_ue {
@@ -367,6 +360,9 @@
 }
 
 @media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
     .about__main {
         padding-left: 0rem;
         width: 80vw;
@@ -380,21 +376,6 @@
     .abt_3 .band_1 {
         display: none;
     }
-    .val_ue .valueDiv {
-        display: grid;
-        justify-content: start;
-        width: 93vw;
-    }
-    .valueDiv .val_details {
-        width: inherit;
-    }
-    .val_details .det_txt {
-        width: inherit;
-    }
-    .val_details .det_img {
-        width: inherit;
-        height: 40vh;
-    }
     .v-m {
         grid-template-columns: repeat(1 , 1fr);
         row-gap: 2rem;
@@ -403,25 +384,19 @@
     .v-m div:nth-child(3) {
         grid-row: initial;
         border-radius: 30px;
-        background: url(misson2.jpg);
         background-size: cover;
         height: 300px;
-        margin-bottom: -2rem;
+        grid-column: 1 / 4;
     }
     .v-m div:nth-child(1) {
-        grid-row: initial;
-        border-radius: 30px;
-        background: url(vision2.jpg);
-        background-size: cover;
-        height: 300px;
-        margin-bottom: -2rem;
+        height: fit-content;
+        grid-column: 1 / 4;
+        padding: 10px;
     }
     .v-m div:nth-child(2) {
         height: fit-content;
-    }
-    
-    .v-m div:nth-child(4) {
-        height: fit-content;
+        grid-column: 1 / 4;
+        padding: 10px;
     }
     .about__Txt .about__img {
         height: 400px;
@@ -433,7 +408,7 @@
     .bandt {
         position: absolute;
         top: -1rem;
-        width: 100px;
+        width: 70px;
         left: -1rem;
         z-index: 10;
         background-color: white;

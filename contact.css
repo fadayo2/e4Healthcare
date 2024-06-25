@@ -20,7 +20,7 @@
 .__herosection .__txt {
     width: inherit;
     height: inherit;
-    background: linear-gradient(to right , rgb(0, 0, 0) , rgba(0, 0, 0, 0.87) , rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0));
+    background: linear-gradient(to right , rgba(0, 0, 0, 0.767) , rgba(0, 0, 0, 0.356) , rgba(0, 0, 0, 0) , rgba(0, 0, 0, 0));
     display: flex;
     align-items: center;
     padding-left: 6rem;
@@ -70,7 +70,7 @@
     border-radius: 10px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.171);
     cursor: pointer;
-    background-color: rgb(8,5,64);
+    background-color: #080540;
     display: flex;
     align-items: start;
     justify-content: space-around;
@@ -167,3 +167,5 @@
         width: 80vw;
     }
 }
+
+

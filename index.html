@@ -6,9 +6,9 @@
     <title>e4Healthcare Services Pty Ltd</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="shortcut icon" href="favicon (3).ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -68,24 +68,25 @@
                 <div>
                     <video class="vid" loop muted autoplay>
                         <source src="Untitled design.mp4" type="video/mp4">
-                      </source>
+                    </video>
+                    <video class="mvid" src="mobileView.mp4" loop muted autoplay></video>
                 </div> 
                 
                 <div class="back"></div>
 
                 <div class="container">
-                   <div>
+                    <div>
                     <h1>e4Healthcare</h1>
                     <p class="goal"> Aged care staffing specialist in Western Australia, known for exceptional hospitality to both clients and staff.</p>
                         <button onclick="contact()" class="join-us">Contact Us</button>
-                   </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <section class="mainSection">
+    <section data-aos="fade-up" class="mainSection">
         <div class="headingTxt">
             <h1>Our <span style="color: #14a0f7;">Services</span></h1>
         </div>
@@ -128,7 +129,7 @@
         </main>
     </section>
 
-    <div class="contactUs">
+    <div data-aos="fade-right" class="contactUs">
         <div class="contactUsDiv">
             <h1>We Care with Love and Respect</h1>
             <p>Our Team Is Here To Help.</p>
@@ -136,20 +137,20 @@
         </div>
     </div>
 
-    <section class="aboutUs">
+    <section data-aos="fade-up" class="aboutUs">
         <div class="aboutUsDiv">
             <div class="abtTxt">
                 <h1>About <span style="color: #14a0f7;">Us</span></h1>
                 <p>At e4 Healthcare Services, we pride ourselves on being a premier staffing provider in Western Australia. Our commitment to exceptional hospitality extends to both our clients and team members. Bridging Staffing Gaps for Aged Care Homes, Hospital, Disability Centres, and Community Homes. We understand the challenges faced by healthcare provider in Perth and the surrounding areas, finding qualified workers on a short notice can be a daunting task. That’s where e4 Healthcare Services steps in.</p>
                 <button onclick="abtUs()" class="abtCta">Read more</button>
             </div>
-            <div class="abtImg"></div
+            <div class="abtImg"></div>
         </div>
     </section>
 
 
 
-    <section class="services__we__provide">
+    <section data-aos="fade-up" class="services__we__provide">
         <header class="h_1">
             <h1>Our services extend to include a variety of <br> <span class="h11">healthcare professionals and support staff, such as:</span></h1>
         </header>
@@ -226,11 +227,12 @@
                     <p>Monday to Friday 8:30am- 6pm</p> <br>
                     <p>Monday to Sunday (24 hours Staff Bookings Only)</p>
                 </div>
-                <!-- <div class="links">
+                <div class="links">
                     <a href=""><i class="fa-brands fa-facebook"></i></a>
                     <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                </div> -->
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
             </div>
         </div>  
         <hr>
@@ -240,15 +242,9 @@
     </footer>
     
     <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        var splide = new Splide( '.splide', {
-            type   : 'loop',
-            perPage: 3,
-            focus  : 'center',
-        } );
-
-        splide.mount();
+        AOS.init();
     </script>
 </body>
 </html>
