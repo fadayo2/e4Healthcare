@@ -32,10 +32,15 @@
 }
 
 .__herosection {
+    position: relative;
     width: 100vw;
     height: 75vh;
     background-image: url(IMG_7037.JPG);
     background-size: cover;
+}
+
+.__herosection img {
+    display: none;
 }
 
 .__txt h1{
@@ -319,7 +324,7 @@
         justify-content: center;
         padding-left: 0;
         padding-top: 0;
-        height: 50vh;
+        height: inherit;
         padding-bottom: 6rem;
     }
     .about__main {
@@ -362,6 +367,19 @@
 @media (max-width: 600px) {
     body {
         overflow-x: hidden;
+    }
+    .__herosection {
+        position: relative;
+        background-image: none;
+    }
+
+    .__herosection img {
+        display: block;
+        z-index: -10;
+        width: 100%;
+        height: inherit;
+        position: absolute;
+        object-fit: cover;
     }
     .about__main {
         padding-left: 0rem;

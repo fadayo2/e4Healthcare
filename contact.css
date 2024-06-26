@@ -17,6 +17,9 @@
     background-image: url(contactus.jpg);
     background-size: cover;
 }
+.__herosection img {
+    display: none;
+}
 .__herosection .__txt {
     width: inherit;
     height: inherit;
@@ -140,6 +143,18 @@
 }
 
 @media (max-width: 600px) {
+    .__herosection {
+        position: relative;
+        background-image: none;
+    }
+    .__herosection img {
+        display: block;
+        z-index: -10;
+        width: 100%;
+        height: inherit;
+        position: absolute;
+        object-fit: cover;
+    }
     .cont_act {
         width: 90vw;
     }

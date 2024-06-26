@@ -27,6 +27,9 @@
     padding-top: 10rem;
     color: white;
 }
+.__herosection img {
+    display: none;
+}
 
 .abt_3 {
     margin: auto;
@@ -185,6 +188,18 @@
 
 
 @media (max-width: 600px) {
+    .__herosection {
+        position: relative;
+        background-image: none;
+    }
+    .__herosection img {
+        display: block;
+        z-index: -10;
+        width: 100%;
+        height: inherit;
+        position: absolute;
+        object-fit: cover;
+    }
     .abt_3 {
         flex-direction: column;
         row-gap: 2rem;
