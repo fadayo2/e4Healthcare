@@ -365,10 +365,14 @@
 }
 
 @media (max-width: 600px) {
+    .navbar {
+        border: 1px solid;
+    }
     body {
         overflow-x: hidden;
     }
     .__herosection {
+        margin-top: 6rem;
         position: relative;
         background-image: none;
     }

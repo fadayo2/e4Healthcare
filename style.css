@@ -986,7 +986,11 @@ footer .footerContext {
     .m2 .servicesDiv{
         width: 90vw;
     }
-
+    .m2 .servicesDiv img {
+        object-fit: cover;
+        width: 100%;
+        height: 270px;
+    }
     .servicesDiv .servicesTxt {
         width: 70vw;
     }   

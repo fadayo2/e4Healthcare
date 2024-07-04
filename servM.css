@@ -130,6 +130,7 @@
         height: 50vh;
         padding-bottom: 6rem;
     }
+    
     .main {
         padding-left: 0;
         gap: 3rem;
@@ -152,6 +153,19 @@
 }
 
 @media (max-width: 600px) {
+    .__herosection {
+        position: relative;
+        background-image: none;
+        margin-top: 6rem;
+    }
+    .__herosection img {
+        display: block;
+        z-index: -10;
+        width: 100%;
+        height: inherit;
+        position: absolute;
+        object-fit: cover;
+    }
     .maindiv .im {
         width: 200px;
         height: 200px;

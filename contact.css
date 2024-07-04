@@ -146,6 +146,7 @@
     .__herosection {
         position: relative;
         background-image: none;
+        margin-top: 6rem;
     }
     .__herosection img {
         display: block;
