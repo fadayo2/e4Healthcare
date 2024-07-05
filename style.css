@@ -358,10 +358,15 @@ body {
     align-items: center;
     justify-content: center;
     height: fit-content;
-    width: 100vw;
-    background-color: white;
+    width: 95vw;
     z-index: 10;
+    margin: auto;
     margin-bottom: 3rem;
+    background-color: white;
+}
+
+.mainSection p {
+    text-align: center;
 }
 
 .headingTxt {
@@ -379,9 +384,8 @@ body {
 }
 
 .m2 {
-    width: 100vw;
+    width: inherit;
     height: fit-content;
-    background-color: #ffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -927,6 +931,7 @@ footer .footerContext {
 
 @media (max-width: 600px) {
     .herosection {
+        position: relative;
         height: 70dvh;
     }
     .container {
@@ -982,6 +987,9 @@ footer .footerContext {
     }
     main {
         padding-left: 2.3rem;
+    }
+    .mainSection {
+        width: 100vw;
     }
     .m2 .servicesDiv{
         width: 90vw;
@@ -1099,7 +1107,7 @@ footer .footerContext {
         /* position: absolute; */
         width: 100%;
         height: 100%;
-        /* object-fit: contain; */
+        object-fit: cover;
         z-index: -1;
     }
 }
