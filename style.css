@@ -460,15 +460,17 @@ body {
 }
 
 .h_1 h1 {
-    font-size: calc(1.9vw + 1.9vh);
+    font-size: calc(1.8vw + 1.8vh);
     font-weight: 400;
     text-align: center;
+    margin: auto;
+    width: 80vw;
 }
 
 .h_1 .h11 {
     color: #14A0F7;
     font-weight: 500;
-    font-size: calc(1.7vw + 1.7vh);
+    /* font-size: calc(1.3vw + 1.7vh); */
     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
@@ -491,7 +493,7 @@ body {
     justify-content: space-evenly;
     /* flex-wrap: wrap; */
     grid-template-columns: auto auto auto auto auto;
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
     /* margin-top: 3rem; */
     row-gap: 3rem;
 }
@@ -524,23 +526,18 @@ body {
     margin-bottom: 2rem;
 }
 
-.services__we__provide .sCta {
+.sCta {
     padding: 15px;
-    width: 200px;
+    width: 90vw;
     margin: auto;
     border-radius: 10px;
     border: none;
-    background-color: rgb(124, 229, 247);
-    font-weight: bold !important;
+    background: var(--banner);
+    color: white;
     font-family: var(--fontFamily);
-    cursor: pointer;
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
+    text-align: center;
 }
-
-.services__we__provide .sCta:hover {
-    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.411);
-}
-
 .aboutUs {
     margin-top: 3rem;
     width: 100vw;
@@ -675,7 +672,7 @@ footer {
 }
 
 footer .footerContext {
-    padding-top: 6rem;
+    padding-top: 3rem;
     width: 100vw;
     height: 80vh;
     display: flex;
@@ -686,7 +683,8 @@ footer .footerContext {
 }
 
 .footerContext .services {
-    width: 300px;
+    /* border: 1px solid white; */
+    width: 400px;
     height: fit-content;
     display: grid;
     align-items: center;
@@ -697,6 +695,7 @@ footer .footerContext {
 }
 
 .footerContext .contact {
+    /* border: 1px solid white; */
     color: white;
     width: 400px;
     height: fit-content;
@@ -772,6 +771,14 @@ footer .footerContext {
     justify-content: center;
     color: white;
     text-align: center;
+}
+
+.oc {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 80vw;
 }
 
 
@@ -852,6 +859,16 @@ footer .footerContext {
     .footerContext .contact {
         width: 30vw;
     }
+    .mainSection {
+        width: 100vw;
+    }
+    .mainSection p {
+        font-size: 16px;
+        font-weight: light;
+        margin: auto;
+        margin-top: 0.2rem;
+        width: 90vw;
+    }
 }
 
 @media (max-width: 768px) {
@@ -920,6 +937,16 @@ footer .footerContext {
         transition: .5s;
         height: 0;
         overflow: hidden;
+    }
+    .mainSection {
+        width: 100vw;
+    }
+    .mainSection p {
+        font-size: 14px;
+        font-weight: light;
+        margin: auto;
+        margin-top: 0.2rem;
+        width: 90vw;
     }
     .vid {
         display: none;
@@ -990,6 +1017,13 @@ footer .footerContext {
     }
     .mainSection {
         width: 100vw;
+    }
+    .mainSection p {
+        font-size: 14px;
+        font-weight: light;
+        margin: auto;
+        margin-top: 0.2rem;
+        width: 90vw;
     }
     .m2 .servicesDiv{
         width: 90vw;
