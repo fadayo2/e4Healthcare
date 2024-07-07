@@ -12,12 +12,12 @@
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
     background: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.233);
+    background-image: var(--banner);
     /* border-radius: 2px; */
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 .custom-cursor {
-    background: var(--color2);
+    background: var(--banner);
     transition: transform 0.1s ease;
 }
 
