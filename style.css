@@ -33,7 +33,6 @@ body {
     overflow-x: hidden;
     font-family: var(--fontFamily);
     background-color: white;
-    /* cursor: none; */
 }
 
 .custom-cursor, .custom-cursor-trail {
