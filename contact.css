@@ -96,8 +96,93 @@
     scale: 1.05;
 }
 
-.cont_act .form {
+.form {
     width: 500px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form .ncc {
+    display: grid;
+    align-items: center;
+    /* justify-content: space-between; */
+    grid-template-columns: auto auto;
+    width: 500px;
+}
+
+.form .ncc .name {
+    display: grid;
+    align-items: center;
+    justify-content: start;
+}
+
+.name input {
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(136, 136, 136);
+    width: 230px;
+    background: none;
+}
+
+.name input:focus {
+    outline: none;
+}
+
+.email input {
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(136, 136, 136);
+    width: 230px;
+    background: none;
+}
+
+.email input:focus {
+    outline: none;
+}
+
+.message textarea {
+    width: 480px;
+    height: 205px;
+    resize: none;
+    padding: 10px;
+    border: none;
+    background-color: rgb(228, 228, 228);
+    margin-left: 1px;
+}
+
+.message textarea:focus {
+    outline: none;
+}
+
+.form .ncc .email {
+    display: grid;
+    align-items: center;
+    justify-content: start;
+}
+
+.form .ncc .message {
+    display: grid;
+    align-items: center;
+    justify-content: start;
+}
+
+#contactForm {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+}
+
+#contactForm button {
+    padding: 14px;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    background-color: #080540;
+    border: none;
+    cursor: pointer;
+    width: 480px;
 }
 
 .map {
@@ -137,9 +222,6 @@
     .cont_act .contact_div {
         width: inherit;
         align-items: center;
-    }
-    .cont_act .form {
-        width: inherit;
     }
 }
 
@@ -183,6 +265,66 @@
     .contact_div .c_d div {
         width: 80vw;
     }
+    .form {
+        margin: auto;
+        margin-top: 3rem;
+        width: 90vw;
+    }
+    .form .ncc {
+        width: inherit;
+        grid-template-columns: auto;
+    }
+    .form .ncc .name {
+        display: grid;
+        align-items: center;
+        justify-content: start;
+        width: inherit;
+    }
+    #contactForm {
+        width: inherit;
+        display: grid;
+        align-items: start;
+        justify-content: center;
+    }
+    #contactForm button {
+        padding: 14px;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+        background-color: #080540;
+        border: none;
+        cursor: pointer;
+        width: inherit;
+    }
+    .message textarea {
+        width: 87vw;
+        height: 205px;
+        resize: none;
+        padding: 10px;
+        border: none;
+        background-color: rgb(228, 228, 228);
+        margin-left: 1px;
+    }
+    .email input {
+        padding: 5px;
+        border: none;
+        border-bottom: 1px solid rgb(136, 136, 136);
+        width: 230px;
+        background: none;
+        width: 87vw;
+        margin-bottom: 20px;
+    }
+    .name input {
+        padding: 5px;
+        border: none;
+        border-bottom: 1px solid rgb(136, 136, 136);
+        width: 230px;
+        background: none;
+        width: 87vw;
+        margin-bottom: 20px;
+    }
+    #contactForm button {
+        width: 87vw;
+    }
 }
-
-

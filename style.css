@@ -237,7 +237,7 @@ body {
     display: none;
 }
 
-.container{
+.container11{
     width: 100vw;
     height: 100vh;  
     background: linear-gradient(to right, rgb(0, 0, 0) -10%, rgba(0, 0, 0, 0) 90%);
@@ -248,7 +248,7 @@ body {
     padding-top: 5rem;
 }
 
-.container div {
+.container .dd {
     height: fit-content;
     width: 530px;
     display: flex;
@@ -257,13 +257,13 @@ body {
     flex-direction: column;
 }
 
-.container div h1 {
+.container11 .dd h1 {
     font-size: calc(3.2vw + 3.2vh);
     color: white;
     font-weight: 300;
 }
 
-.container div p {
+.container11 .dd p {
     display: flex;
     font-size: 1.5vw; 
     font-weight: light;
@@ -271,7 +271,7 @@ body {
     font-smooth: always;
 }
 
-.container div button {
+.container11 .dd button {
     background-color:  #14a0f7;
     color: white;
     width: 150px;
@@ -292,7 +292,7 @@ body {
     animation-timing-function: ease;
 }
 
-.container div button:hover {
+.container11 .dd button:hover {
     background-color: var(--color3); 
     scale: 1.05;
     color: var(--color1);
@@ -799,14 +799,14 @@ footer .footerContext {
     .navLinks {
         margin-left: 0;
     }
-    .container {
+    .container11 {
         height: 50vh;
         align-items: center;
         padding-left: 0;
         padding-top: 0;
         justify-content: center;
     }
-    .container div {
+    .container11 .dd {
         align-items: center;
         width: 90vw;
         gap: 2rem;
@@ -959,12 +959,12 @@ footer .footerContext {
         position: relative;
         height: 70dvh;
     }
-    .container {
+    .container11 {
         height: 70dvh;
         align-items: end;
         padding-bottom: 3rem;
     }
-    .container div p {
+    .container .dd p {
         font-size: 16px;
         text-align: center;
     }
