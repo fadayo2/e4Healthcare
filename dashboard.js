@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Fetching applicants..."); // Debugging output
         loadingText.style.display = "block"; // Show loading text
 
-        fetch("https://sheetdb.io/api/v1/otcmlt8wg2c3f")
+        fetch("https://sheetdb.io/api/v1/5d4sgd82liy40")
             .then(response => {
                 console.log("Response received:", response); // Debugging output
                 if (!response.ok) {
@@ -117,7 +117,14 @@ document.addEventListener("DOMContentLoaded", function () {
                         clientTable.appendChild(row);
                     });
                 } else {
-                    console.log("No applicants found."); // Debugging output
+                    // Display "No applicants found" message
+                    const noApplicantsRow = document.createElement("tr");
+                    const noApplicantsCell = document.createElement("td");
+                    noApplicantsCell.colSpan = 6;
+                    noApplicantsCell.textContent = "No applicants found.";
+                    noApplicantsCell.style.textAlign = "center";
+                    noApplicantsRow.appendChild(noApplicantsCell);
+                    clientTable.appendChild(noApplicantsRow);
                 }
             })
             .catch(error => {
@@ -130,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     deleteButton.onclick = function () {
         if (selectedApplicantEmail) {
             console.log("Attempting to delete applicant with email:", selectedApplicantEmail); // Debugging output
-            fetch(`https://sheetdb.io/api/v1/otcmlt8wg2c3f/email/${encodeURIComponent(selectedApplicantEmail)}`, {
+            fetch(`https://sheetdb.io/api/v1/5d4sgd82liy40/email/${encodeURIComponent(selectedApplicantEmail)}`, {
                 method: "DELETE",
             })
                 .then(response => response.json())
@@ -170,6 +177,6 @@ document.addEventListener("DOMContentLoaded", function () {
         event.returnValue = "Are you sure you want to leave? Changes you made may not be saved.";
     });
 
-    // Initial fetch and setup interval to refresh the table every minute
-    setInterval(fetchApplicants, 60000); // Refresh every 60 seconds
+    // Initial fetch and setup interval to refresh the table every hour
+    setInterval(fetchApplicants, 3600000); // Refresh every 3600000 milliseconds (1 hour)
 });
