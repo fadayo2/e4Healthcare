@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loginButton.addEventListener("click", function () {
         const password = adminPassword.value;
 
-        if (password === "0514") {
+        if (password === "ElRoi2018@") {
             loginScreen.style.display = "none";
             dashboard.style.display = "block";
             fetchApplicants();

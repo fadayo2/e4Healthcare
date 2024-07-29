@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     nextStep1.addEventListener("click", function () {
-        // Check if all required fields in step 1 are filled
         const firstName = document.getElementById("firstName").value;
         const lastName = document.getElementById("lastName").value;
         const email = document.getElementById("email").value;
@@ -58,15 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const question = this.getAttribute("data-question");
             const value = this.getAttribute("data-value");
 
-            // Remove 'selected' class from other options of the same question
             document.querySelectorAll(`.option[data-question="${question}"]`).forEach(opt => {
                 opt.classList.remove("selected");
             });
 
-            // Add 'selected' class to the clicked option
             this.classList.add("selected");
 
-            // Set the selected value to a hidden input field
             let hiddenInput = document.querySelector(`input[name="${question}"]`);
             if (!hiddenInput) {
                 hiddenInput = document.createElement("input");
@@ -78,15 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    form.addEventListener("submit", async function (event) {
+    form.addEventListener("submit", function (event) {
         event.preventDefault();
-        loadingScreen.style.display = "flex"; // Show loading screen
+        loadingScreen.style.display = "flex";
 
-        // Basic form validation
         if (!form.checkValidity()) {
             errorMessage.innerText = "Please fill out all required fields.";
             errorMessage.style.display = "block";
-            loadingScreen.style.display = "none"; // Hide loading screen
+            loadingScreen.style.display = "none";
             return;
         }
 
@@ -94,87 +89,90 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!fileUpload) {
             errorMessage.innerText = "Please upload a file.";
             errorMessage.style.display = "block";
-            loadingScreen.style.display = "none"; // Hide loading screen
+            loadingScreen.style.display = "none";
             return;
         }
 
-        try {
-            const formValues = new FormData(form);
-            let score = 0;
-            for (const [question, answer] of Object.entries(correctAnswers)) {
-                if (formValues.get(question) === answer) {
-                    score++;
+        const formValues = new FormData(form);
+        let score = 0;
+        for (const [question, answer] of Object.entries(correctAnswers)) {
+            if (formValues.get(question) === answer) {
+                score++;
+            }
+        }
+
+        const upload = new tus.Upload(fileUpload, {
+            endpoint: "https://tusd.tusdemo.net/files/",
+            metadata: {
+                filename: fileUpload.name,
+                filetype: fileUpload.type
+            },
+            onError: function (error) {
+                console.error("Error:", error);
+                errorMessage.innerText = "There was an error uploading the file. Please try again later.";
+                errorMessage.style.display = "block";
+                loadingScreen.style.display = "none";
+            },
+            onSuccess: async function () {
+                const fileURL = upload.url;
+                const timestamp = new Date().toISOString();
+
+                const dataToSend = {
+                    firstName: formValues.get("firstName"),
+                    lastName: formValues.get("lastName"),
+                    email: formValues.get("email"),
+                    availability: formValues.get("availability"),
+                    location: formValues.get("location"),
+                    role: formValues.get("role"),
+                    score: score,
+                    fileURL: fileURL,
+                    timestamp: timestamp
+                };
+
+                try {
+                    await fetch("https://sheetdb.io/api/v1/5d4sgd82liy40", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(dataToSend)
+                    });
+
+                    const templateParams = {
+                        email: formValues.get("email"),
+                        first_name: formValues.get("firstName"),
+                        last_name: formValues.get("lastName"),
+                        availability: formValues.get("availability"),
+                        location: formValues.get("location"),
+                        role: formValues.get("role"),
+                        score: score,
+                        applicationDate: new Date().toLocaleDateString()
+                    };
+
+                    await emailjs.send('service_cmsntb7', 'template_xqhzcza', templateParams);
+
+                    form.reset();
+                    step1.classList.remove("active");
+                    step2.classList.remove("active");
+                    main.style.display = 'flex';
+                    img.style.display = 'none';
+                    container.style.display = 'none';
+                    successMessage.innerHTML = `
+                        <h1>Application Details:</h1>
+                        <p>You have successfully completed the job application. Thank you.</p>
+                        <p>Date applied: ${new Date().toLocaleDateString()}</p>
+                    `;
+                    successMessage.style.display = "block";
+                } catch (error) {
+                    console.error("Error:", error);
+                    errorMessage.innerText = "There was an error submitting the form. Please try again later.";
+                    errorMessage.style.display = "block";
+                } finally {
+                    loadingScreen.style.display = "none";
                 }
             }
+        });
 
-            // Upload the file using Easyupload.io
-            const fileFormData = new FormData();
-            fileFormData.append("file", fileUpload);
-
-            const uploadResponse = await fetch("https://easyupload.io/api/upload", {
-                method: "POST",
-                body: fileFormData
-            });
-
-            if (!uploadResponse.ok) {
-                throw new Error("File upload failed");
-            }
-
-            const uploadResult = await uploadResponse.json();
-            const fileURL = uploadResult.link;
-            const timestamp = new Date().toISOString(); // Current time in ISO format
-
-            const dataToSend = {
-                firstName: formValues.get("firstName"),
-                lastName: formValues.get("lastName"),
-                email: formValues.get("email"),
-                availability: formValues.get("availability"),
-                location: formValues.get("location"),
-                role: formValues.get("role"),
-                score: score,
-                fileURL: fileURL,
-                timestamp: timestamp
-            };
-
-            await fetch("https://sheetdb.io/api/v1/5d4sgd82liy40", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(dataToSend) 
-            });
-
-            const templateParams = {
-                email: formValues.get("email"),
-                first_name: formValues.get("firstName"),
-                last_name: formValues.get("lastName"),
-                availability: formValues.get("availability"),
-                location: formValues.get("location"),
-                role: formValues.get("role"),
-                score: score,
-                applicationDate: new Date().toLocaleDateString()
-            };
-
-            await emailjs.send('service_cmsntb7', 'template_xqhzcza', templateParams);
-
-            form.reset();
-            step1.classList.remove("active");
-            step2.classList.remove("active");
-            main.style.display = 'flex';
-            img.style.display = 'none';
-            container.style.display = 'none';
-            successMessage.innerHTML = `
-                <h1>Application Details:</h1>
-                <p>You have successfully completed the job application. Thank you.</p>
-                <p>Date applied: ${new Date().toLocaleDateString()}</p>
-            `;
-            successMessage.style.display = "block";
-        } catch (error) {
-            console.error("Error:", error);
-            errorMessage.innerText = "There was an error submitting the form. Please try again later.";
-            errorMessage.style.display = "block";
-        } finally {
-            loadingScreen.style.display = "none"; // Hide loading screen
-        }
+        upload.start();
     });
 });
