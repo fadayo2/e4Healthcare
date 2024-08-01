@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         location: formValues.get("location"),
                         role: formValues.get("role"),
                         score: score,
+                        fileURL: fileURL,
                         applicationDate: new Date().toLocaleDateString()
                     };
 
