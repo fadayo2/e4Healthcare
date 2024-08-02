@@ -41,7 +41,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         user_name: formData.Name,
         user_email: formData.Email,
         message: formData.Message,
-        to_email: 'afadunmiye@gmail.com' 
+        to_email: 'admin@e4healthcare.info' 
       });
     })
     .then(function(response) {
