@@ -27,21 +27,21 @@ document.getElementById('contactForm').addEventListener('submit', function(event
       });
       
       // Send confirmation email to user
-      return emailjs.send('service_k841jzd', 'template_fk56lrl', {
+      return emailjs.send('service_22stnrc', 'template_fk56lrl', {
         user_name: formData.Name,
         user_email: formData.Email,
         message: formData.Message
-      });
+      }); 
     })
     .then(function(response) {
       console.log('EmailJS Response (User):', response.status, response.text);
       
       // Send email to yourself
-      return emailjs.send('service_k841jzd', 'template_3htp74v', {
+      return emailjs.send('service_22stnrc', 'template_3htp74v', {
         user_name: formData.Name,
         user_email: formData.Email,
         message: formData.Message,
-        to_email: 'admin@e4healthcare.info' 
+        to_email: 'fadunmiyemarvellous@gmail.com'
       });
     })
     .then(function(response) {
